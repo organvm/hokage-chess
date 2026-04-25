@@ -1,0 +1,14 @@
+# seed.yaml
+organ: PERSONAL
+tier: standard
+type: client-project
+status: LOCAL
+implementation: ACTIVE
+produces: []
+consumes: []
+description: "Client engagement for Rob Bonavoglia (@HokageChess); landing page + business model + course catalog"
+metadata:
+  client: "Rob Bonavoglia"
+  brand: "Hokage Chess"
+  channel: "https://www.youtube.com/@HokageChess"
+  last_validated: "2026-04-25"

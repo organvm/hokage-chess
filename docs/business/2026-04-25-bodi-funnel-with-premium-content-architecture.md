@@ -5,7 +5,7 @@
 **Source:** `2026-04-25-rob-call-transcript-source.md` (this directory) — atomized concept IDs `ID-001..ID-009`
 **Cross-reference:** `2026-04-25-hokage-4-level-funnel-architecture.md` (mirror direction); `2026-04-25-cross-pollination-master-diagnosis.md` (synthesis)
 **Status:** v1 architecture, awaiting Rob premium-content links to populate `Premium Content Library` section
-**IRF:** PRT-042
+**IRF:** PRT-043
 
 ---
 

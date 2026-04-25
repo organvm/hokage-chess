@@ -6,7 +6,7 @@
 **Synthesis:** `2026-04-25-cross-pollination-master-diagnosis.md`
 **Lineage:** `2026-04-25-strategy-v6-master.md` (Naruto stack, pricing tiers, founder-asset position); `2026-04-25-apex-predator-lineage-appendix.md` (parent architecture)
 **Status:** v1 architecture, blocked on Kit (ConvertKit) API key for L2 deploy
-**IRF:** PRT-043
+**IRF:** PRT-044
 
 ---
 
@@ -163,9 +163,9 @@ This funnel architecture explicitly depends on or feeds into:
 | **PRT-039** | Character Sheet onboarding (6 chess stats) | L2→L3 conversion ritual — onboarding gives Genin Squad immediate texture |
 | **PRT-040** | Bridge Content pillar (Jutsu of Week / Boss Battle) | Top-of-funnel L1 attraction surface (this session) |
 | **PRT-041** | Discord rituals codification | L2/L3 retention scaffolding (this session) |
-| **PRT-042** | BODI funnel architecture | Cross-direction (mirror) |
-| **PRT-043** | Hokage funnel architecture | THIS DOCUMENT |
-| **PRT-044** | Cross-pollination master diagnosis | Synthesis (this session) |
+| **PRT-043** | BODI funnel architecture | Cross-direction (mirror) |
+| **PRT-044** | Hokage funnel architecture | THIS DOCUMENT |
+| **PRT-045** | Cross-pollination master diagnosis | Synthesis (this session) |
 
 ---
 

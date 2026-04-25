@@ -3,7 +3,7 @@
 **Date:** 2026-04-25
 **Subject:** The single strategic insight from Rob/user voice call — and the architecture that operationalizes it.
 **Status:** Canonical reference for all subsequent Rob strategic work.
-**IRF:** PRT-044
+**IRF:** PRT-045
 
 ---
 
@@ -61,7 +61,7 @@ The asymmetry resolves not by invention but by transplant. **Rob already runs th
 
 This synthesis doc references and ties together two operational specs:
 
-### `2026-04-25-bodi-funnel-with-premium-content-architecture.md` (PRT-042)
+### `2026-04-25-bodi-funnel-with-premium-content-architecture.md` (PRT-043)
 
 The BODI side. Preserves Rob's existing 4-level funnel verbatim, adds a content-injection layer at every level:
 
@@ -73,7 +73,7 @@ The BODI side. Preserves Rob's existing 4-level funnel verbatim, adds a content-
 
 Pending: Rob's premium-content link delivery to populate the Library.
 
-### `2026-04-25-hokage-4-level-funnel-architecture.md` (PRT-043)
+### `2026-04-25-hokage-4-level-funnel-architecture.md` (PRT-044)
 
 The Hokage side. Imports BODI's L1-L4 mechanism, re-skins to chess + Naruto stack:
 
@@ -170,7 +170,7 @@ This synthesis lives downstream of three prior strategic layers:
                             ↓
 2026-04-25 voice call: Rob ↔ user → master diagnosis surfaced
                             ↓
-2026-04-25 THIS SYNTHESIS + sibling architectures (PRT-042, PRT-043)
+2026-04-25 THIS SYNTHESIS + sibling architectures (PRT-043, PRT-044)
 ```
 
 The cross-pollination thesis is the **third instantiation** of Anthony's gamified-niche-coaching pattern — first BODI-as-canvas (2025-12 architecture documents), then Hokage Chess (2026-04 client work), now **the unified two-business architecture for one founder operating both**.
@@ -183,7 +183,7 @@ It also validates the **Product-Domain Engine** skill (shipped 2026-04-25, commi
 
 This doc has discharged its purpose when:
 1. ✅ Source mirrored (`605269b`)
-2. ✅ Both sibling architectures committed (PRT-042 + PRT-043)
+2. ✅ Both sibling architectures committed (PRT-043 + PRT-044)
 3. ✅ This synthesis committed
 4. ⏳ Rob acknowledges the diagnosis (read + agreed)
 5. ⏳ Both architectures populated (BODI premium-content library + Hokage Kit/lead magnet)

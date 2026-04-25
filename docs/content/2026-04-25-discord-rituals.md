@@ -287,8 +287,8 @@ When a Stripe purchase event fires:
 | Doc | Relation |
 |---|---|
 | `2026-04-25-bridge-content-pillar.md` (PRT-040) | Jutsu/Boss Battle drops feed all three rituals |
-| `2026-04-25-hokage-4-level-funnel-architecture.md` (PRT-043) | Rituals scaffold L2/L3 retention; tier-gated rituals support L3-L4 progression |
-| `2026-04-25-bodi-funnel-with-premium-content-architecture.md` (PRT-042) | BODI's Teamzy warmth-cadence is the parallel pattern |
+| `2026-04-25-hokage-4-level-funnel-architecture.md` (PRT-044) | Rituals scaffold L2/L3 retention; tier-gated rituals support L3-L4 progression |
+| `2026-04-25-bodi-funnel-with-premium-content-architecture.md` (PRT-043) | BODI's Teamzy warmth-cadence is the parallel pattern |
 | `2026-04-25-strategy-v6-master.md` | Naruto-stack tier definitions canonical |
 | `2026-04-25-business-plan-v2.md` | Pricing tiers + economic model |
 | `docs/ROB-FIRST-30-DAYS.md` | Discord setup task already on Rob's runway |

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HokageChess: The 10K Transformation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-black: #050505;
+            --accent-red: #ff1f1f;
+            --accent-yellow: #f4d03f;
+            --text-white: #ffffff;
+            --card-gray: #121212;
+            --before-text: #888;
+            --after-text: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-white);
+            font-family: 'Roboto Condensed', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #200 0%, var(--bg-black) 100%);
+            border-bottom: 5px solid var(--accent-red);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2rem, 10vw, 6rem);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: -4px;
+            line-height: 0.9;
+        }
+
+        .toggle-container {
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .blueprint-toggle {
+            background: #222;
+            padding: 10px;
+            border-radius: 50px;
+            display: flex;
+            gap: 10px;
+            border: 2px solid #333;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .toggle-btn {
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-weight: 900;
+            text-transform: uppercase;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .toggle-btn.active {
+            background: var(--accent-red);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .toggle-btn.blueprint-mode.active {
+            background: var(--accent-yellow);
+            color: black;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            background: var(--card-gray);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.5s;
+            position: relative;
+            border: 1px solid #222;
+        }
+
+        .thumb-preview {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thumb-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.8);
+            padding: 5px 10px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        .thumb-desc {
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #aaa;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .video-info {
+            padding: 25px;
+        }
+
+        .video-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            min-height: 3.5rem;
+            line-height: 1.2;
+        }
+
+        .blueprint-data {
+            display: none;
+            color: var(--accent-yellow);
+        }
+
+        .original-data {
+            color: var(--before-text);
+        }
+
+        /* Blueprint Mode Styling */
+        body.blueprint .video-card {
+            border-color: var(--accent-yellow);
+            box-shadow: 0 0 15px rgba(255, 223, 0, 0.1);
+        }
+
+        body.blueprint .blueprint-data {
+            display: block;
+        }
+
+        body.blueprint .original-data {
+            display: none;
+        }
+
+        body.blueprint .thumb-preview {
+            background: linear-gradient(45deg, #220 0%, #111 100%);
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 0.8rem;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        .badge {
+            background: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .shonen-label {
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Summary Header */
+        .audit-summary {
+            background: #111;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--accent-yellow);
+        }
+
+    </style>
+</head>
+<body id="body">
+
+<header>
+    <h1>The 10K<br><span style="color: var(--accent-red)">Transformation</span></h1>
+    <p style="color: #666; font-size: 1.2rem; margin-top: 20px;">Visual Audit of @HokageChess Screenshots</p>
+</header>
+
+<div class="toggle-container">
+    <div class="blueprint-toggle" onclick="toggleBlueprint()">
+        <div id="btn-orig" class="toggle-btn active">Original (Skinny)</div>
+        <div id="btn-blue" class="toggle-btn blueprint-mode">Blueprint (Fit)</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="audit-summary">
+        <h2 style="margin-top: 0; text-transform: uppercase;">Channel Health Audit</h2>
+        <p class="original-data">Currently: You have "Good Polish" but "Weak Discovery." Your thumbnails are visually interesting, but your titles are for existing fans only, not new viewers.</p>
+        <p class="blueprint-data" style="color: var(--accent-yellow);">Optimized: We keep your "Shonen Style" but move the "Episode X" branding to the end. We focus on the *stakes* of the game, not the *serial number* of the video.</p>
+    </div>
+
+    <div class="video-grid" id="grid">
+        <!-- Videos will be injected here -->
+    </div>
+</div>
+
+<script>
+    const videos = [
+        {
+            before: {
+                title: "Breaking the 1400 Elo Barrier! 🔥 Road to 1500 | Episode 35",
+                thumb: "Vegeta theme is COOL, but the board is too small. 'Breaking the 1400' is a generic title.",
+                stats: "3 Views (5h ago)"
+            },
+            after: {
+                title: "The Game That Forced Me To Go Super Saiyan",
+                thumb: "Keep Vegeta, but make YOUR face the Saiyan. Text: 'FINALLY 1400.' Place 'Road to 1500 Ep 35' at the end of the title.",
+                stats: "Target: 2,500 Views"
+            }
+        },
+        {
+            before: {
+                title: "The Rage Was Real After These 2 Losses 🔥 | Road to 1200 Blitz Ep. 5",
+                thumb: "Good face, but too many elements. 'Road to 1200 Blitz' takes up too much title space.",
+                stats: "14 Views (2d ago)"
+            },
+            after: {
+                title: "I Almost Uninstalled Chess After This",
+                thumb: "Remove the background clutter. Make the 'Rage' face 50% larger. Text: 'RETIRED?'",
+                stats: "Target: 5,000 Views"
+            }
+        },
+        {
+            before: {
+                title: "These 2 Chess Games Made Me Lose My Mind 🤯 | Road to 1500 Ep. 31",
+                thumb: "Rage effect is great. Title is okay, but 'Road to' is still the lead.",
+                stats: "22 Views (3w ago)"
+            },
+            after: {
+                title: "I Genuinely Lost My Mind Playing This Game",
+                thumb: "One board, one face, one emotion. Text: 'BROKEN.' Don't split the focus between two games in the thumb.",
+                stats: "Target: 10,000 Views"
+            }
+        },
+        {
+            before: {
+                title: "I Finally Hit 1400... Here's Exactly How I Did It | Road to 1500 Ep. 33",
+                thumb: "Golden trophy theme is strong. Title is slightly too long for mobile.",
+                stats: "139 Views (8d ago)"
+            },
+            after: {
+                title: "How I Finally Broke The 1400 Wall",
+                thumb: "Hokage holding the trophy. Text: 'IMPOSSIBLE.' Focus on the achievement, not the process.",
+                stats: "Target: 15,000 Views"
+            }
+        },
+        {
+            before: {
+                title: "My Brain Was Melting",
+                thumb: "35 minute video! Too long for the title. Thumb is just a face with 'Brain Melting' text.",
+                stats: "30 Views (1m ago)"
+            },
+            after: {
+                title: "The Most Exhausting Chess Game Of My Life",
+                thumb: "Hokage looking literally 'melted' (use a warp filter). Text: '35 MINUTES.' Make the length the feature.",
+                stats: "Target: 3,000 Views"
+            }
+        },
+        {
+            before: {
+                title: "Playing Like A God! 🔥 | Road to 1500 Episode 25",
+                thumb: "God theme is epic. One of your best visual ideas.",
+                stats: "59 Views (1m ago)"
+            },
+            after: {
+                title: "I Played Like A Grandmaster (For One Game)",
+                thumb: "Enhance the 'God' glow. Text: 'PERFECTION.' Hide the 'Road to' in the tags/description.",
+                stats: "Target: 20,000 Views"
+            }
+        }
+    ];
+
+    function renderVideos() {
+        const grid = document.getElementById('grid');
+        grid.innerHTML = '';
+        
+        videos.forEach(v => {
+            const card = document.createElement('div');
+            card.className = 'video-card';
+            card.innerHTML = `
+                <div class="thumb-preview">
+                    <div class="thumb-label original-data">Original Screenshot Analysis</div>
+                    <div class="thumb-label blueprint-data">Blueprint Recommendation</div>
+                    <div class="thumb-desc original-data">${v.before.thumb}</div>
+                    <div class="thumb-desc blueprint-data">${v.after.thumb}</div>
+                </div>
+                <div class="video-info">
+                    <div class="video-title original-data">${v.before.title}</div>
+                    <div class="video-title blueprint-data">${v.after.title}</div>
+                    <div class="stats">
+                        <span class="original-data">${v.before.stats}</span>
+                        <span class="blueprint-data" style="color: var(--accent-yellow)">${v.after.stats}</span>
+                        <span class="badge original-data">CTR: ~2%</span>
+                        <span class="badge blueprint-data" style="background: var(--accent-red)">CTR: 8.5%</span>
+                    </div>
+                </div>
+                <div class="shonen-label">HOKAGE</div>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    function toggleBlueprint() {
+        const body = document.getElementById('body');
+        const btnOrig = document.getElementById('btn-orig');
+        const btnBlue = document.getElementById('btn-blue');
+
+        if (body.classList.contains('blueprint')) {
+            body.classList.remove('blueprint');
+            btnOrig.classList.add('active');
+            btnBlue.classList.remove('active');
+        } else {
+            body.classList.add('blueprint');
+            btnOrig.classList.remove('active');
+            btnBlue.classList.add('active');
+        }
+    }
+
+    renderVideos();
+</script>
+
+</body>
+</html>

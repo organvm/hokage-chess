@@ -1,0 +1,42 @@
+actors:
+  - id: jordan-adler
+    name: Jordan Adler
+    domain: network-marketing
+    relation: hero
+    extraction_focus:
+      - recruitment story structure
+      - duplication mechanics
+      - freedom framing
+  - id: daniel-negreanu
+    name: Daniel Negreanu
+    domain: performance-mindset
+    relation: life-hero
+    extraction_focus:
+      - composure under pressure
+      - identity and confidence language
+      - long-horizon self-reinvention
+  - id: joe-freeman
+    name: Joe Freeman
+    domain: fitness
+    relation: trainer-reference
+    extraction_focus:
+      - training pedagogy
+      - authority signaling
+      - program framing
+  - id: josh-spencer
+    name: Josh Spencer
+    domain: network-marketing
+    relation: direct-sponsor
+    extraction_focus:
+      - website structure
+      - premium positioning
+      - migration across adjacent business models
+  - id: melanie-mitro
+    name: Melanie Mitro
+    domain: top-earner
+    relation: cross-demographic-study
+    extraction_focus:
+      - systems independent of persona affinity
+      - top-performer content patterns
+      - retention and scaling mechanics
+

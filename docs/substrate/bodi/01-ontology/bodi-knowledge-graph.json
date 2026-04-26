@@ -1,0 +1,40 @@
+{
+  "graph": {
+    "name": "bodi-seed-graph",
+    "version": "2026-04-25",
+    "sources": [
+      "../../business/2026-04-25-bodi-funnel-with-premium-content-architecture.md",
+      "../../business/2026-04-25-cross-pollination-master-diagnosis.md",
+      "../../business/2026-04-25-rob-call-transcript-source.md"
+    ]
+  },
+  "nodes": [
+    { "id": "rob-bonavoglia", "type": "person", "label": "Rob Bonavoglia" },
+    { "id": "bodi", "type": "business", "label": "BODI" },
+    { "id": "hokage-chess", "type": "business", "label": "Hokage Chess" },
+    { "id": "teamzy", "type": "tool", "label": "Teamzy" },
+    { "id": "google-form-plan", "type": "artifact", "label": "Google Form Plan Intake" },
+    { "id": "free-fitness-group", "type": "container", "label": "Free Fitness Group" },
+    { "id": "vip-group", "type": "container", "label": "VIP Group Chat" },
+    { "id": "l0-content", "type": "mechanism", "label": "Passive Attraction Content" },
+    { "id": "l1-cold-leads", "type": "stage", "label": "Cold Leads" },
+    { "id": "l2-optin", "type": "stage", "label": "Opt-In" },
+    { "id": "l3-customer", "type": "stage", "label": "Customer / VIP" },
+    { "id": "l4-ambassador", "type": "stage", "label": "Ambassador" }
+  ],
+  "edges": [
+    { "from": "rob-bonavoglia", "to": "bodi", "type": "operates" },
+    { "from": "rob-bonavoglia", "to": "hokage-chess", "type": "operates" },
+    { "from": "bodi", "to": "teamzy", "type": "uses" },
+    { "from": "bodi", "to": "google-form-plan", "type": "uses" },
+    { "from": "bodi", "to": "free-fitness-group", "type": "contains" },
+    { "from": "bodi", "to": "vip-group", "type": "contains" },
+    { "from": "bodi", "to": "l0-content", "type": "needs" },
+    { "from": "l1-cold-leads", "to": "l2-optin", "type": "precedes" },
+    { "from": "l2-optin", "to": "l3-customer", "type": "precedes" },
+    { "from": "l3-customer", "to": "l4-ambassador", "type": "precedes" },
+    { "from": "hokage-chess", "to": "bodi", "type": "sibling-transfer-source" },
+    { "from": "l0-content", "to": "l1-cold-leads", "type": "reduces-pressure-on" }
+  ]
+}
+

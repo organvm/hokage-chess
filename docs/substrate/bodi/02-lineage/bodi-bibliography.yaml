@@ -1,0 +1,38 @@
+sources:
+  - id: rob-call-2026-04-25
+    kind: local-transcript
+    title: Rob call transcript source
+    path: ../../business/2026-04-25-rob-call-transcript-source.md
+    notes: Raw source for funnel mechanics, voice, and named constellation figures.
+  - id: bodi-architecture-v1
+    kind: local-strategy
+    title: BODI - Funnel With Premium Content
+    path: ../../business/2026-04-25-bodi-funnel-with-premium-content-architecture.md
+    notes: Primary statement of L0-L4 architecture and open vacuums.
+  - id: cross-pollination-diagnosis
+    kind: local-strategy
+    title: The Cross-Pollination Master Diagnosis
+    path: ../../business/2026-04-25-cross-pollination-master-diagnosis.md
+    notes: Explains how BODI and Hokage teach each other.
+  - id: jordan-adler-beach-money
+    kind: named-reference
+    title: Beach Money
+    author: Jordan Adler
+    notes: Named by Rob as a hero and network-marketing exemplar.
+  - id: josh-spencer
+    kind: named-reference
+    title: Josh Spencer
+    notes: Named by Rob as a direct sponsor and strong model to study.
+  - id: joe-freeman
+    kind: named-reference
+    title: Joe Freeman
+    notes: Named by Rob as a trainer from BODI.
+  - id: melanie-mitro
+    kind: named-reference
+    title: Melanie Mitro
+    notes: Named as a top earner worth studying even without persona affinity.
+  - id: daniel-negreanu
+    kind: named-reference
+    title: Daniel Negreanu
+    notes: Life and mindset inspiration; useful for extracting high-performance framing rather than direct funnel mechanics.
+

@@ -1,0 +1,32 @@
+agents:
+  - id: lead-miner
+    mission: Acquire and qualify adjacent-to-fitness prospects.
+    primary_surfaces:
+      - instagram-followers
+      - hashtag-niches
+      - reel-engagement-lists
+  - id: plan-converter
+    mission: Move opt-ins into personalized free-plan delivery and email capture.
+    primary_surfaces:
+      - dm-follow-up
+      - google-form
+      - free-group
+  - id: vip-warmer
+    mission: Convert L2 leads into paid customers and keep VIPs active.
+    primary_surfaces:
+      - teamzy
+      - private-group-chat
+      - check-in-cadence
+  - id: content-catalyst
+    mission: Package reels, form checks, mindset clips, and teasers into a true L0 surface.
+    primary_surfaces:
+      - facebook
+      - instagram-reels
+      - youtube-shorts
+  - id: constellation-researcher
+    mission: Study external figures and sibling systems for transferable mechanics.
+    primary_surfaces:
+      - profile-research
+      - website-audits
+      - reading-list-extraction
+

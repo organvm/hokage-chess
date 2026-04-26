@@ -1,0 +1,20 @@
+rules:
+  - source: hokage-premium-content-depth
+    decision: absorb
+    reason: BODI needs the same seriousness about premium educational assets.
+  - source: manual-cold-scraping
+    decision: improve
+    reason: The tactic works, but it should not dominate founder hours once content warms leads.
+  - source: generic-motivation-posts
+    decision: ignore
+    reason: Rob's own strategy requires each post to carry unique information.
+  - source: constellation-study-across-demographics
+    decision: absorb
+    reason: Mechanics are portable even when persona affinity is low.
+  - source: vip-deep-dive-series
+    decision: absorb
+    reason: It strengthens retention and prepares ambassadors.
+  - source: ambassador-toolkit
+    decision: absorb
+    reason: Duplication quality should not depend on founder improvisation.
+

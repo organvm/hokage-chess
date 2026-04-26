@@ -1,0 +1,17 @@
+targets:
+  - id: content-cadence
+    source: hokage-chess
+    desired_outcome: repeatable premium content production rhythm
+  - id: crm-instrumentation
+    source: teamzy-workflow
+    desired_outcome: visible state changes for content-assisted conversion
+  - id: vip-curriculum
+    source: premium-membership-patterns
+    desired_outcome: stronger retention and ambassador readiness
+  - id: ambassador-onboarding
+    source: duplicate-ready-sales-systems
+    desired_outcome: cleaner L4 scaling
+  - id: constellation-research
+    source: cross-domain-study-method
+    desired_outcome: extractable mechanics instead of vague inspiration
+

@@ -1,0 +1,32 @@
+domains:
+  - id: fitness-coaching
+    why: BODI already sells personalized plans and health-oriented trust.
+    extraction_focus:
+      - compliance and adherence systems
+      - plan personalization patterns
+      - client retention rituals
+  - id: network-marketing
+    why: The L4 ambassador layer is structurally downstream of classic MLM mechanics.
+    extraction_focus:
+      - sponsor and downline onboarding
+      - duplication systems
+      - community momentum loops
+  - id: creator-economy
+    why: The missing L0 layer is a content-distribution problem before it is a sales problem.
+    extraction_focus:
+      - short-form content packaging
+      - algorithm-aware cadence
+      - audience warming and conversion
+  - id: crm-operations
+    why: Teamzy is already central, so small process improvements can compound.
+    extraction_focus:
+      - state transitions
+      - field schema
+      - automated reminders and segmentation
+  - id: high-performance-psychology
+    why: Rob's named inspirations include performance figures outside fitness and sales.
+    extraction_focus:
+      - discipline language
+      - identity reinforcement
+      - resilience and consistency
+

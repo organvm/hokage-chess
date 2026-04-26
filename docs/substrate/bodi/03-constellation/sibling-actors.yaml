@@ -1,22 +1,32 @@
-siblings:
-  - id: hokage-chess
-    type: sibling-business
-    generic_process: premium-content-library
-    current_value: deep content bench without equivalent funnel discipline
-  - id: teamzy
-    type: tool
-    generic_process: crm-state-management
-    current_value: warmth tracking and follow-up discipline
-  - id: google-form-plan
-    type: intake
-    generic_process: personalized-lead-conversion
-    current_value: trust building plus email capture
-  - id: public-reels
-    type: distribution-surface
-    generic_process: audience-warming
-    current_value: underused asset that can reduce manual prospecting
-  - id: vip-group
-    type: paid-community
-    generic_process: retention-container
-    current_value: conversion destination that can hold premium material
+# Sibling System Exemplars
 
+**Domain:** Tools and Platforms for the Creator-Operator
+**Status:** EXPANDED
+**Last Updated:** 2026-04-25
+
+## Platforms by Function
+
+### 1. Owned Media & Relationship (Retention)
+- **Beehiiv:** Current standard for "Owned Media." Newsletter-first growth with integrated referral loops and premium subs.
+- **Substack:** Direct-to-consumer writing and community monetization.
+- **Skool:** Gamified community-led education. High engagement via leaderboard and course integration.
+- **Circle:** White-labeled community platform; high control for premium coaching tiers.
+
+### 2. Monetization & Digital Goods (Conversion)
+- **Whop:** Marketplaces for digital products, trading signals, and software access. Ideal for "toxic-free" signal models.
+- **Gumroad:** Simple, low-friction digital storefront for entry-level guides and content packs.
+- **ShopMy:** Influencer-focused storefronts for physical products (supplements, gear).
+
+### 3. CRM & Operational Infrastructure (Management)
+- **Teamzy:** Canonical CRM for warm-market relationship management and follow-up discipline.
+- **GHL (GoHighLevel):** "Operating system" for agencies and high-ticket coaches; handles funnels, SMS, and email.
+- **Zapier / Make:** The connective tissue for automating lead flow between forms, CRMs, and apps.
+
+### 4. Social Commerce & Discovery (Acquisition)
+- **TikTok Shop:** High-volume social commerce hub; integrated physical product selling.
+- **Whatnot:** Live shopping platform; high urgency and real-time interaction.
+- **YouTube Shorts / IG Reels:** Primary L0 discovery surfaces for "Buyer-Led" trust building.
+
+### 5. Performance & Data (Retention + Value)
+- **Whoop / Oura:** Integration of biometric data into high-ticket coaching (Bio-Syncing).
+- **ChatGPT / Gemini:** Operational AI for comment scraping, content drafting, and lead triage.

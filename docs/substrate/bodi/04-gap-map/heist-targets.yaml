@@ -1,17 +1,31 @@
 targets:
-  - id: content-cadence
-    source: hokage-chess
-    desired_outcome: repeatable premium content production rhythm
-  - id: crm-instrumentation
-    source: teamzy-workflow
-    desired_outcome: visible state changes for content-assisted conversion
-  - id: vip-curriculum
-    source: premium-membership-patterns
-    desired_outcome: stronger retention and ambassador readiness
-  - id: ambassador-onboarding
-    source: duplicate-ready-sales-systems
-    desired_outcome: cleaner L4 scaling
-  - id: constellation-research
-    source: cross-domain-study-method
-    desired_outcome: extractable mechanics instead of vague inspiration
-
+  - id: T-001
+    name: Content Inventory (L0)
+    priority: 1
+    file: docs/substrate/bodi/01-ontology/content-inventory.md
+    outcome: Categorized library of 100+ reels/shorts for reuse.
+  - id: T-002
+    name: Owned Media Setup
+    priority: 1
+    file: docs/substrate/bodi/06-production-stack/owned-media-plan.md
+    outcome: Beehiiv/Substack configured for permanent lead capture.
+  - id: T-003
+    name: Bio-Syncing Offer
+    priority: 2
+    file: docs/substrate/bodi/06-production-stack/personalized-plan-template.md
+    outcome: L2 plan includes Whoop/Oura data integration sections.
+  - id: T-004
+    name: AI Lead Screener
+    priority: 2
+    file: docs/substrate/bodi/05-agent-fleet/lead-screener-spec.md
+    outcome: Functional AI agent prototype for L1 triage.
+  - id: T-005
+    name: Ambassador Blueprint
+    priority: 3
+    file: docs/substrate/bodi/08-external-contribution/ambassador-pack.md
+    outcome: Turn-key "Duplication Pack" for new partners.
+  - id: T-006
+    name: Constellation Card-Library
+    priority: 3
+    file: docs/substrate/bodi/03-constellation/actor-cards/README.md
+    outcome: Extractable mechanics from 50+ industry leaders.

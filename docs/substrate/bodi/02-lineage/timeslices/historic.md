@@ -2,27 +2,30 @@
 
 ## Seed historical anchors
 
-1. Rob describes his prospecting style as mining an already-interested fitness niche rather than addressing fully cold strangers.
-2. The system already reflects mature direct-sales habits: free value exchange, email capture, CRM follow-up, and ambassador multiplication.
-3. Rob's named lineage cluster mixes network-marketing, training, and mindset figures instead of staying inside one vertical.
+1. **Direct Sales Legacy:** Rob describes his prospecting style as mining an already-interested fitness niche rather than addressing fully cold strangers. This aligns with the "warm market" philosophy of classic network marketing.
+2. **Systemic Discipline:** The system reflects mature direct-sales habits: free value exchange, email capture, CRM follow-up, and ambassador multiplication.
+3. **The 2024 Pivot:** In November 2024, the parent corporation (BODi, formerly Beachbody) officially terminated its legacy multi-level marketing (MLM) "Coach" network, transitioning to a single-level affiliate model. This historical break marks the shift from "recruiting a downline" to "building a distribution network."
 
-## Named ancestor figures from the 2026-04-25 call
+## Key Lineage Figures and Philosophies
 
-| Figure | Why they matter to the lineage |
-|---|---|
-| Jordan Adler | Canonical network-marketing reference and author of *Beach Money* |
-| Josh Spencer | Direct sponsor and a concrete website/business model to inspect |
-| Joe Freeman | Internal trainer reference from BODI |
-| Melanie Mitro | Top earner whose mechanics are useful even if persona affinity is low |
-| Daniel Negreanu | Mindset and performance reference that broadens the study universe |
+| Figure | Role | Key Contribution |
+|---|---|---|
+| **Jordan Adler** | *Beach Money* Author | **Simplicity & Duplication.** Advocated for "making friends without an agenda" and the "one person per month" consistency rule. Taught that distribution > sales. |
+| **Josh Spencer** | Direct Sponsor / Mentor | **Hybrid Diversification.** Successfully bridged high-ticket fitness affiliate work with "toxic-free" day trading education. Emphasizes emotional regulation and time freedom. |
+| **Joe Freeman** | Internal Trainer | Source for the technical and tactical training protocols used within the BODi ecosystem. |
+| **Melanie Mitro** | Top Industry Earner | Proved the high-volume operational model for converting social followers into customers through rigorous systems. |
+| **Daniel Negreanu** | Poker Legend | **Mindset & Performance.** Broadens the lineage to include the psychological discipline of professional high-stakes performance (crucial for both chess and trading). |
 
-## Historical pattern already visible
+## Historical Pattern: Outbound Strength
 
-The business did not emerge from a media-first creator model. It emerged from outbound sales discipline. That is why content currently behaves like a supplement rather than the first layer of the machine.
+The business did not emerge from a media-first creator model. It emerged from **outbound sales discipline.** History shows a consistent preference for:
+- **Direct contact** over passive broadcasting.
+- **High-frequency interaction** over low-frequency production.
+- **Proven systems** over experimental branding.
 
-## What history suggests
+## What History Suggests for BODI
 
-- BODI's strength comes from action and repetition, not from brand theater.
-- Any content system added later has to preserve the high-contact trust-building that the existing funnel already produces.
-- The right adjacent histories are network marketing, fitness coaching, creator funnels, and high-performance mindset disciplines.
+- Any content system must preserve the **high-contact trust-building** of the legacy outbound model.
+- The shift to an affiliate model (2024) necessitates a "Creator-led" approach where content acts as the passive attraction surface that feeds the active sales engine.
+- The lineage is not just fitness; it is a synthesis of **network marketing, high-performance mindset, and financial education.**
 

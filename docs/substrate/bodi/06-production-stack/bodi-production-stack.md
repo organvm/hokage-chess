@@ -1,32 +1,39 @@
 # BODI Production Stack
 
-## Current stack
+**Status:** REGENERATED (Research-Augmented)
+**Last Updated:** 2026-04-25
 
-| Surface | Current role |
-|---|---|
-| Instagram | niche prospecting, followers, and reels |
-| Facebook Page | public content surface and reels |
-| Google Form | personalized plan intake and email capture |
-| Teamzy | CRM and warmth tracking |
-| Private group chat | VIP retention surface |
-| Product / BODI offer | paid conversion object |
+## Current Confirmed Stack
 
-## Proposed additions already present in local strategy
+| Layer | Tool | Role | Status |
+| :--- | :--- | :--- | :--- |
+| **Acquisition** | Instagram / FB | Niche prospecting and reels | `ACTIVE` |
+| **Opt-in** | Google Form | Personalized plan intake | `ACTIVE` |
+| **Relationship** | **Teamzy** | Canonical CRM for warmth/follow-up | `CENTRAL` |
+| **Community** | Private Group Chat | VIP retention surface | `ACTIVE` |
+| **Conversion** | BODi / Beachbody | Paid conversion objects (Affiliate) | `ACTIVE` |
 
-| Addition | Why it fits |
-|---|---|
-| L0 content cadence | reduces L1 founder burn |
-| content pack attached to free plans | strengthens L2 retention |
-| live Q&A ritual | gives L2 and L3 a recurrent event anchor |
-| weekly VIP deep-dive | turns product buyers into members of a curriculum |
-| ambassador toolkit | normalizes replication at L4 |
+## Proposed & Provisional Stack (2026 Shift)
 
-## Rhythms worth tracking
+| Layer | Tool | Role | Source |
+| :--- | :--- | :--- | :--- |
+| **Owned Land** | **Beehiiv** | "Owned Media" database / Newsletter | `PROVISIONAL` |
+| **Operations** | **ChatGPT/Gemini** | AI Lead Screener and comment triage | `PROVISIONAL` |
+| **Value** | **Whoop / Oura** | Wearable data for bio-syncing plans | `PROVISIONAL` |
+| **Monetization** | **Whop** | Digital product marketplace (Trading/Chess) | `PROVISIONAL` |
+| **Community** | **Skool / Circle** | Gamified education portal | `PROVISIONAL` |
 
-- weekly manual prospecting hours
-- reels published per week
-- inbound engagement attributable to public content
-- plan deliveries per week
-- L2 to L3 conversion rate
-- VIP to ambassador conversion rate
+## Performance Rhythms (KPIs)
 
+- **Manual L1 Hours:** Target < 5 hrs/week (Currently ~20).
+- **L0 Inbound Ratio:** % of leads from content vs. scraping.
+- **Owned Conversion:** % of leads moving from IG to Beehiiv.
+- **VIP LTV:** Retention duration in months.
+- **Ambassador Velocity:** Number of new duplication-ready partners/month.
+
+## Provisional Teamzy Field Spec (Blocked-Awaiting-Collaborator)
+The following fields are proposed for Teamzy to track content effectiveness:
+- `Source_Content_ID` (which reel brought them in)
+- `Wearable_User` (Boolean: Yes/No)
+- `Owned_Media_Subscriber` (Boolean: Yes/No)
+- `Ambassador_Readiness` (Scale 1-10)

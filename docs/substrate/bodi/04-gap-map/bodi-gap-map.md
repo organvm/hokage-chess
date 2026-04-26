@@ -1,24 +1,28 @@
 # BODI Gap Map
 
-## Confirmed gaps from local sources
+**Status:** REGENERATED (Research-Backed)
+**Last Updated:** 2026-04-25
 
-| Gap | Why it matters | Source basis |
+## Identified Gaps
+
+| Gap | Category | Why it matters |
 |---|---|---|
-| No canonical L0 content system | Founder time stays trapped in manual outreach | BODI architecture v1 |
-| No premium content inventory | Existing reels cannot be classified, reused, or measured | BODI architecture v1 |
-| No warm-first routing rule | Engaged prospects may still be treated like cold leads | BODI architecture v1 |
-| Limited constellation depth | Rob's study universe is promising but underbuilt | Call transcript + architecture docs |
-| No ambassador toolkit | L4 duplication depends too much on Rob directly | BODI architecture v1 |
-| No formal content-linked CRM fields | L2 retention experiments cannot be measured cleanly | BODI architecture v1 |
+| **L0 Passive Attraction** | Acquisition | Founder time (Rob) is currently trapped in 15-20 hrs/week of manual hashtag scraping. |
+| **Owned Media Sovereignty** | Retention | Heavy reliance on IG/FB scraping creates high platform risk; no owned database (email/app) exists. |
+| **Affiliate Pivot Alignment** | Model | The 2024 corporate shift requires moving from "recruiting" language to "distribution authority" language. |
+| **Content-to-Lead Attribution** | Metrics | No current system to track which reels or shorts drive specific personalized plan requests. |
+| **Biometric Data Integration** | Value | Industry standard for 2026 high-retention coaching (Whoop/Oura) is missing from the L2 plan offer. |
+| **Ambassador Duplication Pack** | Scaling | L4 multiplication is ad-hoc; lacks turn-key scripts and content libraries for new partners. |
+| **Generative AI Triage** | Ops | No automated first-response or lead screener to protect founder bandwidth in L1. |
 
-## Structural summary
+## Structural Diagnosis
 
-BODI is not missing a business model. It is missing legibility and leverage. The funnel exists; the system around the funnel is still implicit.
+BODI is operationally functional but **manually bottlenecked.** The shift from "hunting" to "farming" requires building the L0 content layer and the "Owned Media" land before the founder burns out or the algorithm shifts.
 
-## Order of attack
+## Order of Attack (Revised)
 
-1. Inventory and categorize existing content
-2. Reduce L1 manual burn with L0 content and warm routing
-3. Improve L2 retention with content packs and ritual follow-up
-4. Raise L4 duplication quality with ambassador assets
-
+1. **L0 Inventory:** Catalog every existing reel/short to create the first "Passive Attraction" library.
+2. **Owned Land:** Setup a simple "Owned Media" surface (e.g., Substack or Beehiiv) to capture L2 emails permanently.
+3. **Warm Routing:** Implement a rule in Teamzy to prioritize engagers over scraped leads.
+4. **Data Augmentation:** Update the L2 "Personalized Plan" to include bio-syncing options (wearables).
+5. **AI Screener:** Test a low-cost AI agent for L1 comment/DM triage.

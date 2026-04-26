@@ -35,4 +35,29 @@ sources:
     kind: named-reference
     title: Daniel Negreanu
     notes: Life and mindset inspiration; useful for extracting high-performance framing rather than direct funnel mechanics.
+  - id: bodi-corp-2026
+    kind: external-report
+    title: "BODi 2026 Corporate Turnaround Report"
+    author: The Beachbody Company
+    notes: Documents the pivot from MLM to single-level affiliate and "Health Esteem" branding.
+  - id: social-commerce-2026
+    kind: industry-report
+    title: "The State of Social Commerce 2026"
+    author: Narrative Group
+    notes: Confirms the shift toward creator-led selling and live shopping.
+  - id: buyer-led-marketing-2026
+    kind: article
+    title: "Buyer-Led Marketing: The Fitness Coaching Pivot"
+    author: Andrew Wallis
+    notes: Defines the move from high-pressure funnels to trust-based buyer-led systems.
+  - id: hybrid-training-2026
+    kind: article
+    title: "Hybrid Training: The New Industry Standard"
+    author: Athletech News
+    notes: Explains integration of wearable data for client retention.
+  - id: josh-spencer-toxic-free
+    kind: named-reference
+    title: "Toxic-Free Trading & Wellness Convergence"
+    author: Josh Spencer
+    notes: Primary source for "toxic-free" branding and business diversification strategy.
 

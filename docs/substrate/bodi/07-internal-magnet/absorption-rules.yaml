@@ -1,20 +1,53 @@
 rules:
-  - source: hokage-premium-content-depth
-    decision: absorb
-    reason: BODI needs the same seriousness about premium educational assets.
-  - source: manual-cold-scraping
-    decision: improve
-    reason: The tactic works, but it should not dominate founder hours once content warms leads.
-  - source: generic-motivation-posts
-    decision: ignore
-    reason: Rob's own strategy requires each post to carry unique information.
-  - source: constellation-study-across-demographics
-    decision: absorb
-    reason: Mechanics are portable even when persona affinity is low.
-  - source: vip-deep-dive-series
-    decision: absorb
-    reason: It strengthens retention and prepares ambassadors.
-  - source: ambassador-toolkit
-    decision: absorb
-    reason: Duplication quality should not depend on founder improvisation.
-
+  - id: R-001
+    source: hokage-premium-content-depth
+    decision: ABSORB
+    reason: BODI needs the same seriousness about premium educational assets (L0/L1) to reduce manual outreach.
+  - id: R-002
+    source: manual-cold-scraping
+    decision: IMPROVE
+    reason: The tactic is foundational but must be augmented by AI-assisted triage and content-led passive attraction.
+  - id: R-003
+    source: generic-motivation-posts
+    decision: IGNORE
+    reason: High-intent audiences require "unique information" and "Health Esteem" value, not generic platitudes.
+  - id: R-004
+    source: constellation-study-across-demographics
+    decision: ABSORB
+    reason: Operational mechanics (funnels, follow-up) are portable regardless of stylistic affinity.
+  - id: R-005
+    source: vip-deep-dive-series
+    decision: ABSORB
+    reason: High-ticket retention requires constant educational "upgrades" to keep the community active.
+  - id: R-006
+    source: ambassador-toolkit
+    decision: ABSORB
+    reason: Scaling depends on perfect duplication; ambassadors need scripts, content packs, and workflows.
+  - id: R-007
+    source: buyer-led-systems
+    decision: ABSORB
+    reason: Shift from "hunting" leads to "guiding" buyers who have already signaled interest through content.
+  - id: R-008
+    source: owned-media-sovereignty
+    decision: ABSORB
+    reason: Protect the business against platform algorithm shifts by moving leads to email/branded apps.
+  - id: R-009
+    source: biometric-data-integration
+    decision: IMPROVE
+    reason: Use Whoop/Oura data to personalize the "L2 Plan" and increase client switching costs.
+  - id: R-010
+    source: generative-engine-optimization (GEO)
+    decision: ABSORB
+    reason: Future leads will come from AI search assistants; content must be optimized for Gemini/ChatGPT.
+  - id: R-011
+    source: high-pressure-dm-closing
+    decision: IGNORE
+    reason: 2026 market standards favor "warm-first" relationship building over cold pressure.
+  - id: R-012
+    source: social-commerce-live-shopping
+    decision: IMPROVE
+    reason: Integrate real-time interactive selling into the VIP layer to increase customer LTV.
+  - id: R-013
+    source: toxic-free-hybrid-branding
+    decision: ABSORB
+    reason: Validates the diversification into finance/trading as a "clean living" extension of wellness.

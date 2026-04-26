@@ -21,7 +21,7 @@
 - [x] Verify source/link counts per timeslice
 
 ## Phase 3: Stratum 3 Constellation Build-out [DONE]
-- [x] Expand `bodi-constellation.yaml` to >= 50 actors
+- [x] Expand `bodi-constellation.md` to >= 50 actors
 - [x] Create actor cards for seed figures
 - [x] Expand `sibling-actors.yaml`
 

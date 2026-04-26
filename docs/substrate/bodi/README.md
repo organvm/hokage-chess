@@ -30,6 +30,6 @@ This directory is the first executable instance of the domain substrate plan for
 
 1. `06-production-stack/bodi-production-stack.md`
 2. `04-gap-map/bodi-gap-map.md`
-3. `03-constellation/bodi-constellation.yaml`
+3. `03-constellation/bodi-constellation.md`
 4. `07-internal-magnet/absorption-rules.yaml`
 

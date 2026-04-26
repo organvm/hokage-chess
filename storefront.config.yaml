@@ -1,0 +1,41 @@
+# hokage-chess — storefront opt-in config
+#
+# Per-repo opt-in for the personalized-storefront-render substrate.
+# When this file is present, `organvm storefront sync --repo .` walks source.globs,
+# reads any `audiences:` frontmatter, and emits per-persona _generated/*.client.md drafts.
+#
+# Schema: https://meta-organvm.github.io/schema-definitions/storefront-config-v1.schema.json (slice-3 work)
+# Skill:  ~/Workspace/a-i--skills/skills/project-management/personalized-storefront-render/
+
+schema_version: "1.0"
+persona_id: rob
+render_adapter: nextjs
+
+source:
+  globs:
+    - "docs/business/**/*.md"
+    - "docs/content/**/*.md"
+    - "docs/ROB-FIRST-30-DAYS.md"
+
+output:
+  generated: "docs/storefront/_generated/"
+  curated: "docs/storefront/_curated/"
+
+deploy:
+  primary_target: "rob.hokagechess.com"   # subdomain — pending domain ownership confirmation
+  fallback_target: "4jp.io/rob/"           # if primary unavailable, ship under personal domain
+  auth_mode: "link-gated"
+  link_slug_length: 24
+
+substrate_links:
+  persona_lexicon: "~/Documents/personas/rob-bonavoglia.lexicon.yaml"
+  voice_constitution: "rob-warm-direct"
+  artifact_schema: "https://meta-organvm.github.io/schema-definitions/storefront-v1.schema.json"
+
+# Substrate audit gates (slice 3):
+# - Refuse to render any artifact whose audiences[].bridge_to references handles
+#   not present in the persona lexicon.
+# - Refuse to render any artifact whose tldr field contains any forbidden_terms entry
+#   from the persona lexicon.
+# - Warn (not block) on any audiences[].surface != "storefront" with no curated
+#   override after 7 days.

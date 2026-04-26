@@ -1,3 +1,14 @@
+---
+audiences:
+  - id: rob
+    register: pathos
+    surface: storefront
+    bridge_to: [chess, fitness]
+tldr: "Two recurring video formats — Jutsu of the Week and Boss Battle — that turn YouTube viewers into Discord squad members across 4 funnel levels."
+strata: production-stack
+client_render_mode: tldr
+---
+
 # Hokage Chess — Bridge Content Pillar (PRT-040)
 
 **Date:** 2026-04-25

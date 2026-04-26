@@ -35,8 +35,8 @@
 - [x] Regenerate `bodi-production-stack.md`
 - [x] Create auxiliary prep artifacts (actor cards, test log)
 
-## Phase 6: Verification, Audit, Ship
-- [ ] Verify structural counts and thresholds
-- [ ] Rerun PDE audit and record improvements
-- [ ] Commit and push all changes
-- [ ] Summarize remaining human-blocked items
+## Phase 6: Verification, Audit, Ship [DONE]
+- [x] Verify structural counts and thresholds
+- [x] Rerun PDE audit and record improvements
+- [x] Commit and push all changes
+- [x] Summarize remaining human-blocked items

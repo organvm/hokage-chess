@@ -30,3 +30,20 @@ agents:
       - website-audits
       - reading-list-extraction
 
+  # Trinary Review Agents (Adversarial Modeling)
+  - id: the-absorber
+    mission: Identify net positives and exponentially expand the scope of a specification.
+    primary_surfaces:
+      - internal-spec-review
+      - brainstorming-logs
+  - id: the-critic
+    mission: Rigorously identify logic gaps, redundancy, and complexity-for-complexity's sake.
+    primary_surfaces:
+      - internal-spec-review
+      - code-audit
+  - id: the-contrarian
+    mission: Challenge all premises using raw human logic and feedback; prevent over-engineering.
+    primary_surfaces:
+      - internal-spec-review
+      - handoff-post-mortems
+

@@ -5,8 +5,13 @@ import {
   evaluateIdea,
   createUploadChecklist,
   planWeek,
+  SHORT_FORMAT,
 } from "../src/lib/content-strategy";
-import type { VideoIdea, ThumbnailScore } from "../src/lib/content-strategy";
+import type {
+  VideoIdea,
+  ThumbnailScore,
+  ContentLexicon,
+} from "../src/lib/content-strategy";
 
 describe("scoreTitleFormula", () => {
   it("should score a perfect title as 3", () => {
@@ -141,6 +146,56 @@ describe("createUploadChecklist", () => {
 
     expect(checklist.ready).toBe(false);
     expect(checklist.thumbnail_pass).toBe(false);
+  });
+});
+
+describe("ContentLexicon parametrization", () => {
+  const FITNESS_LEXICON: ContentLexicon = {
+    emphasis_words: ["finally", "actually", "secret"],
+    stakes_verbs: ["squatted", "deadlifted", "broke"],
+    stakes_nouns: ["PR", "rep", "macro"],
+    anti_patterns: [],
+    max_title_length: 60,
+  };
+
+  it("scores a fitness-domain title using a fitness lexicon", () => {
+    const result = scoreTitleFormula("I FINALLY Squatted 405", FITNESS_LEXICON);
+    expect(result.has_emotion).toBe(true);
+    expect(result.has_stakes).toBe(true);
+    expect(result.score).toBe(3);
+  });
+
+  it("falls back to ALL-CAPS emphasis when lexicon misses", () => {
+    const empty: ContentLexicon = {
+      emphasis_words: [],
+      stakes_verbs: [],
+      stakes_nouns: [],
+      anti_patterns: [],
+      max_title_length: 60,
+    };
+    const result = scoreTitleFormula("ROUTINE morning lift 225", empty);
+    expect(result.has_emotion).toBe(true);
+    expect(result.has_stakes).toBe(true);
+  });
+
+  it("respects domain-specific max_title_length", () => {
+    const tight: ContentLexicon = {
+      emphasis_words: ["finally"],
+      stakes_verbs: ["beat"],
+      stakes_nouns: [],
+      anti_patterns: [],
+      max_title_length: 20,
+    };
+    const result = scoreTitleFormula("I finally beat 1500", tight);
+    expect(result.length_ok).toBe(true);
+    const tooLong = scoreTitleFormula("I finally beat the 1500-rated player", tight);
+    expect(tooLong.length_ok).toBe(false);
+  });
+});
+
+describe("SHORT_FORMAT constant", () => {
+  it("is the literal scheduler treats specially", () => {
+    expect(SHORT_FORMAT).toBe("short");
   });
 });
 

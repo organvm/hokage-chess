@@ -66,7 +66,7 @@ The audience does not see four operators. They see one operator running one arch
 
 - BODI 4-Level Funnel (existing, Rob's lane).
 - Hokage 4-Level Funnel (installed via cross-pollination diagnosis).
-- `src/lib/content-strategy.ts` — universal-parametric scoring engine, brand-neutral, accepts `ContentLexicon` per domain. 11/11 tests green, 2026-04-28. This file is the executable counterpart to the magnetic figure.
+- `src/lib/content-strategy.ts` — universal-parametric scoring engine, brand-neutral, accepts `ContentLexicon` per domain. 52/52 tests green across 4 suites (analytics / content-strategy / growth / narrative), 2026-04-28. This file is the executable counterpart to the magnetic figure.
 - Teamzy CRM (BODI side) + Discord (Hokage/community side) + future coaching CRM as L2-L3 retention vessels.
 
 **Lateral (Poiesis / Taxis / Logos / Koinonia / Kerygma):**

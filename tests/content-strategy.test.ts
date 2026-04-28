@@ -1,11 +1,12 @@
+import { describe, it, expect } from "vitest";
 import {
   scoreTitleFormula,
   scoreThumbnail,
   evaluateIdea,
   createUploadChecklist,
   planWeek,
-} from "../src/content-strategy";
-import type { VideoIdea, ThumbnailScore } from "../src/content-strategy";
+} from "../src/lib/content-strategy";
+import type { VideoIdea, ThumbnailScore } from "../src/lib/content-strategy";
 
 describe("scoreTitleFormula", () => {
   it("should score a perfect title as 3", () => {

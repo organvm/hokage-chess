@@ -1,10 +1,11 @@
+import { describe, it, expect } from "vitest";
 import {
   createNarrative,
   validateNarrative,
   generateChapters,
   getArcPlan,
   ACT_GUIDELINES,
-} from "../src/narrative";
+} from "../src/lib/narrative";
 
 describe("ACT_GUIDELINES", () => {
   it("should have all 4 acts", () => {

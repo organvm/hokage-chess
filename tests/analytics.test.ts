@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import {
   calculateCTR,
   assessCTR,
@@ -5,8 +6,8 @@ import {
   generateWeeklyScorecard,
   evaluatePhaseGate,
   detectRedFlags,
-} from "../src/analytics";
-import type { VideoMetrics, WeeklyScorecard } from "../src/analytics";
+} from "../src/lib/analytics";
+import type { VideoMetrics, WeeklyScorecard } from "../src/lib/analytics";
 
 function makeMetrics(overrides: Partial<VideoMetrics> = {}): VideoMetrics {
   return {

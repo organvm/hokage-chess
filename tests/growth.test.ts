@@ -1,3 +1,4 @@
+import { describe, it, expect } from "vitest";
 import {
   determinePhase,
   getTarget,
@@ -6,8 +7,8 @@ import {
   projectAnnualRevenue,
   checkYPPEligibility,
   QUARTERLY_TARGETS,
-} from "../src/growth";
-import type { GrowthSnapshot, RevenueStream } from "../src/growth";
+} from "../src/lib/growth";
+import type { GrowthSnapshot, RevenueStream } from "../src/lib/growth";
 
 describe("determinePhase", () => {
   it("should return q1_setup for low subscribers", () => {

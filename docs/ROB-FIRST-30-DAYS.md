@@ -44,6 +44,12 @@ Three priorities: tighten what people see (titles, thumbnails), capture what the
   - `#sparring-partners` — pairing-up channel for games
   - `#study-hall` — focus rooms, accountability check-ins
 - Keep it small for the first 30 days. 50 active members beats 500 ghosts. Curate, don't broadcast.
+- **Naming note:** Genin/Chunin/Jonin are DUAL-USE on purpose. In Discord they're free rating-banded roles. When the paid tier ships (Phase 2), the same names become product tiers — Genin Squad ($9/mo), Chunin Dojo ($29/mo), Jonin Mentorship ($99/mo). One brand vocabulary across community + commerce.
+
+**Two recurring named formats — Bridge Content (PRT-040)**
+- **Jutsu of the Week** — Tuesday cadence, single chess technique, 8–12 min YouTube + 60–90 s Shorts re-cut. Below in the Shorts section. Anchors the weekly content rhythm.
+- **Boss Battle** — Monthly cadence, opponent-encounter format. Four archetypes available: Park Boss (in-person OTB game), Online Boss (titled-player ladder match), Title Boss (rated tournament round), Echo Boss (Rob analyzes his own past game from the climb's perspective). Recommendation for Episode 1: **Echo Boss** — lowest scheduling friction, Rob's footage already exists.
+- Both formats end on the same CTA stack: `hokagechess.com/free-plan` (lead magnet) → Discord (Village) → subscribe. Each piece points outward into the funnel.
 
 **"Jutsu of the Week" Shorts**
 - 3–5 minutes, one concept you actually learned that week (not a textbook concept you already knew).
@@ -71,13 +77,15 @@ Phase 1 is 100% safe under this framing. Phase 2 (merch, physical chess pieces) 
 
 ---
 
-### What Anthony's doing in parallel
+### What Anthony's doing in parallel (status as of 2026-04-29)
 
-- Landing page deploys to Vercel this week. You'll get a preview URL before it goes public.
-- hokagechess.com domain availability check in progress; if open, registering via Cloudflare.
-- Email capture form wired into Kit. Every signup on the site enters "The Scroll" automatically.
-- OG image metadata for social sharing — Twitter, Discord, iMessage previews all show the right card.
-- Mobile responsiveness verified on actual phones (70%+ of your YouTube traffic is mobile).
+- ✅ **Landing page built** — Next.js, all 9 sections, dark mode + Hokage Red palette. Tests green (56/56). Build green.
+- ✅ **OG + Twitter share image** — generated 1200×630 brand-faithful card, file-convention auto-injects meta tags. Previews will show the right card on every share.
+- ⏭ **Vercel deploy** — preflight doc shipped (`docs/business/2026-04-29-vercel-deploy-preflight.md`); ~5 min user-driven flow remains. Preview URL incoming.
+- ⏭ **hokagechess.com domain** — confirmed available (Verisign whois 2026-04-25); registration pending (financial decision; Vercel Domains or Cloudflare both viable). Fallback `4jp.io/rob/` ready if delayed.
+- ✅ **Email capture form wired** — `/api/subscribe` route + Kit v3 endpoint integration; graceful "launching soon" fallback while Kit credentials land.
+- ⏭ **Kit setup** — runbook shipped (`docs/business/2026-04-29-kit-setup-runbook.md`); ~5 min user-driven (account → form → API key → Vercel env vars).
+- ✅ **Mobile responsive (static review)** — PASS w/ 4 watch-items for live-deploy browser QA (`docs/business/2026-04-29-mobile-qa-notes.md`).
 
 You don't need to think about any of this. It will exist when you need it.
 

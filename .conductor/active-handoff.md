@@ -86,3 +86,79 @@ Orchestrating session is running Stream H (Reconciliation Gate). At your close-o
 ## A note on scope honesty
 
 If turn 1 reveals that Rob's actual scope is much smaller than Maddie's (e.g., transcript cleanup with a 30-minute close-out), that's a legitimate finding — surface it to the user immediately. The dispatcher set up Rob and Maddie as parallel sessions assuming peer scope. If they're not actually peer-scope, you should not pad the session to look balanced. Truthful close-out matters more than session symmetry.
+
+---
+
+## Live status — 2026-04-29 (in-flight; updated continuously)
+
+**Session ID:** `S-2026-04-29-rob-hokage`
+**Owner this turn:** Claude Opus 4.7 (1M context)
+**Mode:** Auto + macro scope per user turn 1 ("preserved + archived + cannibalized" / "all" / "GH issue + IRF candidate")
+**Last refresh:** 2026-04-29 ~14:58 (after Phase 3.1)
+
+### Scope override (verified disk state)
+
+The dispatcher's "Hokage Transcript Hygiene" framing was stale. Verified scope via `seed.yaml` (`type: client-project, status: LOCAL, implementation: ACTIVE`), top-level `HANDOFF.md` (5 work groups, 10 vacuums), and active feature work (commits `e4ed095`, `53bcd32`). Real scope: full Next.js client engagement with active product engineering. The transcript deletion was atomization residue, not the deliverable.
+
+### Commits stacked (local; push-to-main currently blocked by sandbox policy)
+
+| # | Hash | Subject | Phase |
+|---|---|---|---|
+| 1 | `deb23b1` | chore: gitignore .gemini/ and .history/ | 1.1 |
+| 2 | `a2c5031` | archive: rob call transcript source moved to docs/archive/2026-04/ | 1.2 |
+| 3 | `ecf6300` | archive: 2026-04-28 session audit ledger (3 snapshots) | 1.3a |
+| 4 | `0afd1bc` | archive: 2026-04-28 cross-stream workstream synthesis (Maddie + Rob) | 1.3b |
+| 5 | `6c248ae` | chore: track Stream D entry permit | 1.4 |
+| 6 | `ef75cb1` | feat(business): 75-person constellation master + gap manifest | 2.1 |
+| 7 | `91a818d` | docs(handoff): refresh vacuum status + Stream D 2026-04-29 session log | 2.2 |
+| 8 | `b0e3a9f` | feat(landing): OG + Twitter images via Next.js 16 file convention | 3.1 |
+
+### GH issues opened this session
+
+- [#44 — PRT-046: 75-person constellation master file](https://github.com/4444J99/hokage-chess/issues/44)
+
+### IRF candidates emitted
+
+- `IRF-PRT-046` — constellation master scaffold + gap manifest (artifact + commit `ef75cb1` + GH #44 = triple-reference complete)
+
+Pending IRF candidates (queued for Phase 5 close-out):
+- `IRF-PRT-V8` — landing-page deploy preflight (Phase 3.3 in flight)
+- `IRF-PRT-V7` — Kit form handler wiring + setup runbook (Phase 4 in flight)
+
+### Verified state at last refresh
+
+- `npm run test` → 56/56 ✓ (4 suites)
+- `npm run build` → 7/7 static pages prerender + 2 OG image routes ✓
+- Working tree clean
+- Origin sync: 8 commits ahead (push blocked by sandbox guard against direct main push; will surface to user for resolution)
+
+### Cross-stream signals (for the parallel Maddie session at `organvm/sovereign-systems--elevate-align`)
+
+The 2026-04-28 Gemini cross-stream synthesis (now archived at `docs/archive/2026-04/gemini-2026-04-28-refactored-workstreams.md`) contains content directly relevant to the Maddie spiral stream. Per repo lock, I did NOT cross-write to her repo, but surfacing the signal here so her stream can ingest if useful:
+
+- **§A.4: 11 audit gaps for the Maddie spiral** (G1–G11) — including the Apr-20 questionnaire (Q1–Q8) still unanswered, hub.config.ts emoji drift (G3), Node 11 phase mismatch (G4), V4 hybrid geometry spec gap (G7), 5-decoded "moveable & clickable" requirements not captured (G10).
+- **§A.5: 7 brainstorming forms** (Form 1–7) with Maddie required/not-required tags.
+- **§A.6: 8 blocked items** awaiting Maddie's decisions.
+- **§A.7: artifact paths** — `brain/f0c19e07/artifacts/maddie_spiral_wishes.md`, `brain/4feea892/artifacts/spiral_audit_and_forms.md`.
+
+If the Maddie session is reading this, the canonical archive is `4444J99/hokage-chess/docs/archive/2026-04/gemini-2026-04-28-refactored-workstreams.md` — pull Workstream A only (Workstream B is Rob-side and already actioned in this repo).
+
+### What's still in flight this session
+
+- **Phase 3.2:** mobile QA at 375px (next)
+- **Phase 3.3:** Vercel deploy preflight doc + GH issue V8
+- **Phase 4.1:** Kit form handler wiring (V7)
+- **Phase 4.2:** Kit setup runbook + Rob homework refresh
+- **Phase 4.3:** ROB-FIRST-30-DAYS.md audit
+- **Phase 5.1:** DONE counter increment (single dedicated commit to `meta-organvm/organvm-corpvs-testamentvm/data/done-id-counter.json`)
+- **Phase 5.2:** close-out summary in `docs/archive/2026-04/2026-04-29-stream-d-closeout.md`
+- **Phase 5.3:** final refresh of this envelope for next Stream-D session
+
+### Outstanding user-facing question
+
+**Push to main is currently blocked by sandbox policy** ("Pushing directly to main branch bypasses pull request review"). All 8 commits above are local-only on `main` ahead of `origin/main`. User needs to choose:
+- (a) Authorize direct push to main (one-shot grant)
+- (b) Switch this stream to a feature branch + PR
+- (c) Defer push to manual user action at session close
+
+Will surface as discrete decision at end of Phase 4 (or on next user prompt, whichever comes first).

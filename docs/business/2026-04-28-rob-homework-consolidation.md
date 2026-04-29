@@ -1,8 +1,10 @@
 # Rob Homework Consolidation
 
-**Date:** 2026-04-28
+**Date:** 2026-04-28 (refreshed 2026-04-29 by Stream D session `S-2026-04-29-rob-hokage`)
 **Status:** open — awaiting Rob delivery
 **Address:** `docs/business/2026-04-28-rob-homework-consolidation.md`
+
+> **2026-04-29 refresh notes:** Item #2 re-scoped from "70 more profiles (blank slate)" → "20 more names + binary validation of taxonomy" — Anthony's 2026-04-25 research expanded the constellation to 50+ named actors (see `docs/business/2026-04-29-75-person-constellation-master.md`). The lower-friction ask is a yes/no on the 6-domain taxonomy + ~20 incremental names rather than a 70-blank scaffold. All other items unchanged. New cross-refs added at file bottom for the V7 wiring + V8 preflight that landed this session.
 
 > *"Asks are black holes — physical address required."* This file is the single durable address for everything currently blocked on Rob's delivery. Update status inline as items resolve.
 
@@ -19,7 +21,7 @@ Rob-blocking asks were previously distributed across four separate artifacts (PR
 | # | Ask | Unblocks | Source artifact | Status |
 |---|---|---|---|---|
 | 1 | Premium reel links — FB Page reels, IG reels, inspirational shorts | BODI funnel L0 (passive attraction layer); §3.1 Premium Content Library populated | `2026-04-25-bodi-funnel-with-premium-content-architecture.md` | OPEN |
-| 2 | 70 more constellation profiles (have 5: Adler / Negreanu / Freeman / Spencer / Mitro) | Constellation of Points framework usable at scale; cross-demographic modeling validated | `2026-04-25-apex-predator-lineage-appendix.md` | OPEN |
+| 2 | **(re-scoped 2026-04-29)** Validate 6-domain taxonomy (yes/no), name ~20 more actors, flag any to cut. The "70 blank profiles" framing was superseded — Anthony's research expanded named list to 50+ across 6 domains (see master file below). | Constellation of Points framework usable at scale; cross-demographic modeling validated; 44 named-no-card actors become parallelizable card-authoring work (Workstream B / Mechanic Extractor) | `docs/business/2026-04-29-75-person-constellation-master.md` (master index + gap manifest) · `docs/substrate/bodi/03-constellation/bodi-constellation.md` (50+ named source) | OPEN — refined |
 | 3 | Confirm FB Page handle + IG handle as canonical L0 surfaces | Distribution endpoints addressable; Kerygma POSSE plumbing terminates somewhere real | `2026-04-25-bodi-funnel-with-premium-content-architecture.md` §3 | OPEN |
 | 4 | Disclose Teamzy field schema (current fields, custom fields, automation triggers) | §3.3 funnel additions specifiable not duplicative | `2026-04-25-bodi-funnel-with-premium-content-architecture.md` §3.3 | OPEN |
 | 5 | Validate / reorder 12-week Jutsu of the Week starter slate | Episode 1 production unblocks; recurring Tuesday cadence locks in | `2026-04-25-bridge-content-pillar.md` | OPEN |
@@ -73,6 +75,24 @@ The asymmetry is not "Anthony hasn't shipped." The asymmetry is that the next ba
 
 ## Cross-references
 
-- IRF entries: PRT-040, PRT-043, PRT-044, PRT-045
+- IRF entries: PRT-040, PRT-043, PRT-044, PRT-045, PRT-046 (constellation master, opened 2026-04-29 GH #44), PRT-V7 (Kit form wiring, GH #46), PRT-V8 (Vercel deploy preflight, GH #45)
 - Magnetic manifest: `docs/rob/2026-04-28-rob-magnetic-manifest.md`
 - Trailing artifact catalog (§15 black-hole list source): `~/.claude/plans/2026-04-27-rob-maddie-trailing-artifact-catalog.md`
+
+## What landed 2026-04-29 (Stream D session)
+
+- **Constellation master** — `docs/business/2026-04-29-75-person-constellation-master.md` (commit `ef75cb1`, GH #44). Re-scopes item #2 above; provides actor-card author template + fill state by domain.
+- **OG + Twitter image** — `src/app/opengraph-image.png` + `src/app/twitter-image.png` via Next.js 16 file convention; reproducible generator at `scripts/generate-og-image.mjs` (commit `b0e3a9f`).
+- **Mobile QA notes** — `docs/business/2026-04-29-mobile-qa-notes.md` static review PASS w/ 4 watch-items for live-deploy QA (commit `4fdbc19`).
+- **Vercel deploy preflight** — `docs/business/2026-04-29-vercel-deploy-preflight.md` (commit `8f17b5f`, GH #45). Ship is now ~5 min of user-driven Vercel UI clicks.
+- **Kit form handler wired** — `src/app/api/subscribe/route.ts` + `src/app/page.tsx FinalCTASection` (commit `c253df8`, GH #46). Graceful degradation if Kit env vars absent.
+- **Kit setup runbook** — `docs/business/2026-04-29-kit-setup-runbook.md` (commit `52bbcae`). 5-minute user-driven flow to unblock V7 with Kit credentials.
+- **HANDOFF.md vacuum status** — refreshed (commit `91a818d`). V1, V2 closed (in 2026-04-25 commits, just not reflected in HANDOFF until now). V3, V7, V8, V10 IN PROGRESS.
+
+What's still Rob-blocked (no change): #1, #3, #4, #5, #6, #7, #8 from the table. Plus the re-scoped #2.
+
+What's still user-blocked (Anthony, financial/auth):
+- Vercel auth + first deploy
+- `hokagechess.com` domain registration
+- Kit account setup + paste API key into Vercel env (per `2026-04-29-kit-setup-runbook.md`)
+- Push-to-main authorization (sandbox blocked direct push this session; 13+ commits stacked locally on `main` ahead of `origin/main`)

@@ -151,13 +151,38 @@ to dated versions before syncing.
 
 | # | Vacuum | Group | Status |
 |---|--------|-------|--------|
-| V1 | No seed.yaml | Group 2 | OPEN |
-| V2 | Not in registry | Group 2 | OPEN |
-| V3 | No GitHub issues | Group 2 | OPEN |
-| V4 | PDE skill not built | Group 3 | OPEN |
+| V1 | No seed.yaml | Group 2 | DONE 2026-04-25 (commit `b544076`) |
+| V2 | Not in registry | Group 2 | DONE 2026-04-25 (commit `e68933d` in `meta-organvm/organvm-corpvs-testamentvm`) |
+| V3 | No GitHub issues | Group 2 | IN PROGRESS — issues #44 (PRT-046) opened 2026-04-29; V7/V8 issues to follow this session |
+| V4 | PDE skill not built | Group 3 | OPEN — out of scope for Stream D execution |
 | V5 | MEMORY.md missing entries | — | FIXED |
-| V6 | Domain not registered | Group 1+4 | OPEN (Rob action) |
-| V7 | No email funnel | Group 1+4 | OPEN |
-| V8 | Landing page not deployed | Group 1 | OPEN |
-| V9 | 54 plans unsynced to chezmoi | Group 5 | OPEN |
-| V10 | IRF not updated | Group 2 | OPEN |
+| V6 | Domain not registered | Group 1+4 | OPEN — user action (financial transaction) |
+| V7 | No email funnel | Group 1+4 | IN PROGRESS — form handler wiring + Kit setup runbook (Phase 4) |
+| V8 | Landing page not deployed | Group 1 | IN PROGRESS — OG asset + mobile QA + Vercel preflight doc (Phase 3); deploy gated on user auth |
+| V9 | 54 plans unsynced to chezmoi | Group 5 | OPEN — out of scope for Stream D execution |
+| V10 | IRF not updated | Group 2 | IN PROGRESS — Stream H Reconciliation Gate at session close |
+
+---
+
+## Session updates
+
+### Stream D 2026-04-29 (`S-2026-04-29-rob-hokage`)
+
+Macro-execution session derived from `~/.claude/plans/snuggly-gathering-bear.md` partition. Plan: `.claude/plans/` (synced post-execution).
+
+**Working-tree alchemy (Phase 1):**
+- `.gemini/`, `.history/` added to `.gitignore` (commit `deb23b1`)
+- 2026-04-25 Rob call transcript restored from deletion + moved to `docs/archive/2026-04/` (commit `a2c5031`)
+- 2026-04-28 audit ledger archived (3 snapshots: final 41KB, snapshot 16KB, raw .ini 86KB) (commit `ecf6300`)
+- 2026-04-28 cross-stream Gemini workstream synthesis archived (commit `0afd1bc`)
+- `.conductor/active-handoff.md` (Stream D entry permit) tracked (commit `6c248ae`)
+
+**Substrate (Phase 2):**
+- 75-person constellation master index + gap manifest shipped at `docs/business/2026-04-29-75-person-constellation-master.md` (commit `ef75cb1`); GH issue #44 opened (PRT-046).
+- Vacuum status table refreshed (this section).
+
+**Verified during Phase 0 preflight:** 56/56 vitest tests pass; `next build` succeeds; static prerender ✓ for `/`, `/_not-found`, `/for/[persona]` (3 personas: stuck-beginner, climbing-intermediate, returning-adult-improver).
+
+**A1+A2 from `.claude/plans/2026-04-28-rob-world-allusions-sweep.md`:** confirmed shipped in commits `e4ed095`, `53bcd32` (content-strategy.ts at `src/lib/content-strategy.ts`, vitest wired, 52→56 tests across 4 suites).
+
+**Closing this session (deferred to Phase 5):** Phase 3 deploy assets · Phase 4 Kit form wiring + runbook + Rob homework refresh · DONE counter increment · close-out summary · `.conductor/active-handoff.md` refresh for next Stream-D session.

@@ -48,3 +48,11 @@ research/raw-html-2026-04-25/
 Untitled-*.md
 export-*.md
 
+# Session export and session-memory artifacts dropped at repo root.
+# These belong in docs/archive/ (if safe to commit) or
+# ~/.local/share/hokage-chess/operational/exports/ (if a transcript
+# diff contains substrings that trip gitleaks). Never let them sit
+# at root.
+20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*-local-command-caveatcaveat-*.txt
+session-ses_*.md
+

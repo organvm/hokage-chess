@@ -44,22 +44,16 @@ export const metadata: Metadata = {
     siteName: "Hokage Chess",
     type: "website",
     locale: "en_US",
-    images: [
-      {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Hokage Chess — The Climb Starts Here",
-      },
-    ],
+    // og:image meta tags auto-injected from src/app/opengraph-image.png
+    // (Next.js 16 file convention; see scripts/generate-og-image.mjs)
   },
   twitter: {
     card: "summary_large_image",
     title: "Hokage Chess — The Climb Starts Here",
     description:
       "The road from low-advanced to grandmaster, told from inside the climb.",
-    images: ["/og.png"],
     creator: "@HokageChess",
+    // twitter:image auto-injected from src/app/twitter-image.png
   },
   icons: {
     icon: "/favicon.ico",

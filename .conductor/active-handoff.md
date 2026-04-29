@@ -89,18 +89,20 @@ If turn 1 reveals that Rob's actual scope is much smaller than Maddie's (e.g., t
 
 ---
 
-## Live status — 2026-04-29 (in-flight; updated continuously)
+## Live status — 2026-04-29 (FINAL refresh at session close)
 
 **Session ID:** `S-2026-04-29-rob-hokage`
 **Owner this turn:** Claude Opus 4.7 (1M context)
 **Mode:** Auto + macro scope per user turn 1 ("preserved + archived + cannibalized" / "all" / "GH issue + IRF candidate")
-**Last refresh:** 2026-04-29 ~14:58 (after Phase 3.1)
+**Status:** CLOSED — all 5 phases complete; 16 commits stacked locally; 3 GH issues opened; 3 IRF candidates emitted; 2 user-facing decisions surfaced.
+**Last refresh:** 2026-04-29 ~15:18 (Phase 5.3 — final close-out)
+**Earlier refresh:** 2026-04-29 ~14:58 (Phase 3.1 in-flight; archived as commit `5013fd9` content)
 
 ### Scope override (verified disk state)
 
 The dispatcher's "Hokage Transcript Hygiene" framing was stale. Verified scope via `seed.yaml` (`type: client-project, status: LOCAL, implementation: ACTIVE`), top-level `HANDOFF.md` (5 work groups, 10 vacuums), and active feature work (commits `e4ed095`, `53bcd32`). Real scope: full Next.js client engagement with active product engineering. The transcript deletion was atomization residue, not the deliverable.
 
-### Commits stacked (local; push-to-main currently blocked by sandbox policy)
+### Commits stacked (local; push-to-main blocked by sandbox — see Decision 1)
 
 | # | Hash | Subject | Phase |
 |---|---|---|---|
@@ -112,25 +114,37 @@ The dispatcher's "Hokage Transcript Hygiene" framing was stale. Verified scope v
 | 6 | `ef75cb1` | feat(business): 75-person constellation master + gap manifest | 2.1 |
 | 7 | `91a818d` | docs(handoff): refresh vacuum status + Stream D 2026-04-29 session log | 2.2 |
 | 8 | `b0e3a9f` | feat(landing): OG + Twitter images via Next.js 16 file convention | 3.1 |
+| 9 | `5013fd9` | chore(handoff): in-flight refresh of active-handoff.md (relay mode) | 5.3 (interim) |
+| 10 | `4fdbc19` | docs(business): mobile QA notes — static review PASS w/ 4 watch-items | 3.2 |
+| 11 | `8f17b5f` | docs(business): Vercel deploy preflight — V8 ready for user-driven ship | 3.3 |
+| 12 | `c253df8` | feat(landing): wire Kit form handler via /api/subscribe (V7) | 4.1 |
+| 13 | `52bbcae` | docs(business): Kit setup runbook + Rob homework refresh (Phase 4.2) | 4.2 |
+| 14 | `d185b0e` | docs(business): refresh Rob homework w/ 2026-04-29 deltas | 4.2 |
+| 15 | `7347e9e` | docs(rob): refresh ROB-FIRST-30-DAYS w/ session deltas + format gaps | 4.3 |
+| 16 | `14297b1` | docs(closeout): Stream D 2026-04-29 close-out summary + plan sync | 5.2 |
+| 17 | (this commit) | chore(handoff): final close-out refresh of active-handoff envelope | 5.3 (final) |
 
 ### GH issues opened this session
 
 - [#44 — PRT-046: 75-person constellation master file](https://github.com/4444J99/hokage-chess/issues/44)
+- [#45 — V8: Vercel landing page deploy](https://github.com/4444J99/hokage-chess/issues/45)
+- [#46 — V7: Kit email capture wiring + setup runbook](https://github.com/4444J99/hokage-chess/issues/46)
 
 ### IRF candidates emitted
 
-- `IRF-PRT-046` — constellation master scaffold + gap manifest (artifact + commit `ef75cb1` + GH #44 = triple-reference complete)
+All three triple-reference complete (artifact + commit + GH issue), pending only Stream H Reconciliation Gate verification + DONE counter increment:
 
-Pending IRF candidates (queued for Phase 5 close-out):
-- `IRF-PRT-V8` — landing-page deploy preflight (Phase 3.3 in flight)
-- `IRF-PRT-V7` — Kit form handler wiring + setup runbook (Phase 4 in flight)
+- `IRF-PRT-046` — constellation master + gap manifest · `ef75cb1` · GH #44
+- `IRF-PRT-V8` — Vercel deploy preflight (V8 substrate) · `8f17b5f` (+ `b0e3a9f`, `4fdbc19` supporting) · GH #45
+- `IRF-PRT-V7` — Kit form handler wiring + setup runbook (V7 substrate) · `c253df8` (+ `52bbcae` supporting) · GH #46
 
-### Verified state at last refresh
+### Verified state at session close
 
-- `npm run test` → 56/56 ✓ (4 suites)
-- `npm run build` → 7/7 static pages prerender + 2 OG image routes ✓
-- Working tree clean
-- Origin sync: 8 commits ahead (push blocked by sandbox guard against direct main push; will surface to user for resolution)
+- `npm run test` → 56/56 ✓ (4 suites; verified before final commits)
+- `npm run build` → 10/10 routes (static + dynamic /api/subscribe + 2 OG image routes) ✓
+- Working tree: clean immediately after this commit lands
+- Origin sync: 17 commits ahead of `origin/main` (push blocked — Decision 1)
+- Cross-repo write to DONE counter: BLOCKED (Decision 2)
 
 ### Cross-stream signals (for the parallel Maddie session at `organvm/sovereign-systems--elevate-align`)
 
@@ -143,22 +157,45 @@ The 2026-04-28 Gemini cross-stream synthesis (now archived at `docs/archive/2026
 
 If the Maddie session is reading this, the canonical archive is `4444J99/hokage-chess/docs/archive/2026-04/gemini-2026-04-28-refactored-workstreams.md` — pull Workstream A only (Workstream B is Rob-side and already actioned in this repo).
 
-### What's still in flight this session
+### Phase completion ledger
 
-- **Phase 3.2:** mobile QA at 375px (next)
-- **Phase 3.3:** Vercel deploy preflight doc + GH issue V8
-- **Phase 4.1:** Kit form handler wiring (V7)
-- **Phase 4.2:** Kit setup runbook + Rob homework refresh
-- **Phase 4.3:** ROB-FIRST-30-DAYS.md audit
-- **Phase 5.1:** DONE counter increment (single dedicated commit to `meta-organvm/organvm-corpvs-testamentvm/data/done-id-counter.json`)
-- **Phase 5.2:** close-out summary in `docs/archive/2026-04/2026-04-29-stream-d-closeout.md`
-- **Phase 5.3:** final refresh of this envelope for next Stream-D session
+| Phase | Status | Output |
+|---|---|---|
+| 0 — Preflight | ✅ DONE | Tests 56/56, build 10/10, sync confirmed |
+| 1 — Working-tree alchemy | ✅ DONE | 5 commits (`deb23b1`–`6c248ae`) — preserved + archived + cannibalized |
+| 2 — Substrate | ✅ DONE | 2 commits (`ef75cb1`, `91a818d`) + GH #44 |
+| 3 — Deploy preparation | ✅ DONE | 3 commits (`b0e3a9f`, `4fdbc19`, `8f17b5f`) + GH #45 |
+| 4 — Email funnel + Rob docs | ✅ DONE | 4 commits (`c253df8`, `52bbcae`, `d185b0e`, `7347e9e`) + GH #46 |
+| 5.1 — DONE counter | ⚠ BLOCKED | Cross-repo write denied by sandbox; Decision 2 surfaced |
+| 5.2 — Close-out summary | ✅ DONE | Commit `14297b1` |
+| 5.3 — Final handoff refresh | ✅ DONE | This commit |
 
-### Outstanding user-facing question
+### User-facing decisions surfaced (3 items)
 
-**Push to main is currently blocked by sandbox policy** ("Pushing directly to main branch bypasses pull request review"). All 8 commits above are local-only on `main` ahead of `origin/main`. User needs to choose:
-- (a) Authorize direct push to main (one-shot grant)
-- (b) Switch this stream to a feature branch + PR
-- (c) Defer push to manual user action at session close
+**Decision 1 — Push-to-main authorization.** 17 commits stacked locally on `main` ahead of `origin/main`. Sandbox blocked direct push (more restrictive than your historical workflow in this repo). Options: (a) authorize direct push, (b) feature branch + PR, (c) you push manually at session close. Detailed in `docs/archive/2026-04/2026-04-29-stream-d-closeout.md` § Open user-facing decisions.
 
-Will surface as discrete decision at end of Phase 4 (or on next user prompt, whichever comes first).
+**Decision 2 — DONE counter increment.** `meta-organvm/.../done-id-counter.json` would advance 505 → 508, claiming DONE-505/506/507 for `IRF-PRT-046`/`IRF-PRT-V8`/`IRF-PRT-V7`. Cross-repo write blocked by sandbox despite explicit ExitPlanMode permission. Options: (a) you do it manually, (b) Stream H Gate handles it, (c) authorize cross-repo write next session.
+
+**Decision 3 — User-driven user-facing actions.** Vercel deploy + domain registration + Kit credentials. ~10 minutes total. Runbooks at `docs/business/2026-04-29-vercel-deploy-preflight.md` + `docs/business/2026-04-29-kit-setup-runbook.md`. Order doesn't matter; can interleave.
+
+### Recommended focus for next Stream-D session
+
+If user resolves Decision 1 + Decision 2 between sessions, next session opens with: 17 commits pushed, IRF rows promoted, DONE counter at 508. Then natural next moves:
+
+1. **44 named-no-card actor cards** — parallelizable Workstream B / Mechanic Extractor work. Low-friction, high-volume.
+2. **A3 catalog §15 Rob-subset triage** — last item from `2026-04-28-rob-world-allusions-sweep.md`.
+3. **Welcome sequence email copy** — once Kit credentials are live and Rob's lead-magnet PDF is in flight.
+4. **Vercel preview URL → Rob** — once V8 deploys, send the URL for Rob's mobile QA + share-test.
+
+If Rob's homework lands (any of #1, #3, #4, #5, #6, #7, #8 from `docs/business/2026-04-28-rob-homework-consolidation.md`), pivot accordingly:
+- **#7 ack** — quickest unblock; canonizes cross-pollination as north star.
+- **#1 reel links** — populates BODI funnel L0; opens content distribution loop.
+- **#8 record Ep 1** — first instance of recurring named-format pillar; produces test footage for the content-strategy.ts scoring engine.
+
+### Cross-stream signal (still standing)
+
+§A.4 / §A.5 / §A.6 / §A.7 of `docs/archive/2026-04/gemini-2026-04-28-refactored-workstreams.md` are Maddie-relevant. Not cross-written per repo lock. Maddie session at `organvm/sovereign-systems--elevate-align` should ingest if useful — she presumably has her own active-handoff envelope mirroring this protocol.
+
+### Honest scope assessment (from close-out)
+
+The dispatcher set up Rob and Maddie as parallel sessions assuming peer scope. This session shipped **17 commits across 5 phases** (15 substantive + 2 envelope refreshes) with 3 GH issues + 3 IRF candidates. **Rob and Maddie ARE peer-scope**, contrary to the dispatcher's narrow "transcript hygiene" framing. The substrate work this session is the *unblock layer* — making Rob's actual deploy a 10-minute user-driven sequence rather than a multi-session engineering project.

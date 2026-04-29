@@ -43,6 +43,8 @@ research/raw-html-2026-04-25/
 
 # editor scratch / local history / session exports
 .lh/
+.history/
+.gemini/
 Untitled-*.md
 export-*.md
 

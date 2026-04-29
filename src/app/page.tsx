@@ -610,8 +610,49 @@ function FAQSection() {
   );
 }
 
+type FormState =
+  | { kind: "idle" }
+  | { kind: "submitting" }
+  | { kind: "success" }
+  | { kind: "error"; reason: string };
+
 function FinalCTASection() {
   const [email, setEmail] = useState("");
+  const [state, setState] = useState<FormState>({ kind: "idle" });
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setState({ kind: "submitting" });
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = (await res.json().catch(() => ({}))) as {
+        ok?: boolean;
+        reason?: string;
+        detail?: string;
+      };
+      if (res.ok && data.ok) {
+        setState({ kind: "success" });
+        setEmail("");
+        return;
+      }
+      const reason =
+        data.reason === "config_incomplete"
+          ? "Email signup is launching soon — check back shortly."
+          : data.reason === "invalid_email"
+            ? "That email looks off — double-check?"
+            : "Couldn't subscribe right now. Try again in a minute.";
+      setState({ kind: "error", reason });
+    } catch {
+      setState({
+        kind: "error",
+        reason: "Network hiccup — try again in a minute.",
+      });
+    }
+  }
 
   return (
     <section
@@ -633,29 +674,51 @@ function FinalCTASection() {
           from the climb. No spam. Unsubscribe anytime.
         </p>
 
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            // TODO: Connect to Kit (ConvertKit) API
-            console.log("Email submitted:", email);
-          }}
-          className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-        >
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="your.email@example.com"
-            required
-            className="flex-1 bg-hokage-gray border border-hokage-light/20 text-white px-5 py-4 rounded-sm font-mono text-sm placeholder:text-hokage-light/30 focus:outline-none focus:border-hokage-red/60 transition-colors"
-          />
-          <button
-            type="submit"
-            className="bg-hokage-red text-white font-heading text-sm uppercase tracking-wider px-8 py-4 rounded-sm cta-glow shrink-0"
+        {state.kind === "success" ? (
+          <div
+            role="status"
+            className="max-w-md mx-auto bg-hokage-red/15 border border-hokage-red/40 rounded-sm px-6 py-5 text-white"
           >
-            Join the Village
-          </button>
-        </form>
+            <p className="font-heading text-lg uppercase tracking-wider">
+              Welcome to the Village.
+            </p>
+            <p className="text-sm text-hokage-light/70 mt-2">
+              Check your inbox — &ldquo;The 1300 Escape Plan&rdquo; is on its way.
+            </p>
+          </div>
+        ) : (
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+            aria-busy={state.kind === "submitting"}
+          >
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="your.email@example.com"
+              required
+              disabled={state.kind === "submitting"}
+              className="flex-1 bg-hokage-gray border border-hokage-light/20 text-white px-5 py-4 rounded-sm font-mono text-sm placeholder:text-hokage-light/30 focus:outline-none focus:border-hokage-red/60 transition-colors disabled:opacity-50"
+            />
+            <button
+              type="submit"
+              disabled={state.kind === "submitting"}
+              className="bg-hokage-red text-white font-heading text-sm uppercase tracking-wider px-8 py-4 rounded-sm cta-glow shrink-0 disabled:opacity-60"
+            >
+              {state.kind === "submitting" ? "Joining…" : "Join the Village"}
+            </button>
+          </form>
+        )}
+
+        {state.kind === "error" && (
+          <p
+            role="alert"
+            className="text-sm text-hokage-red/90 mt-4 max-w-md mx-auto"
+          >
+            {state.reason}
+          </p>
+        )}
 
         <p className="text-xs text-hokage-light/30 mt-4">
           Free resources. Weekly insights. No spam. Unsubscribe anytime.

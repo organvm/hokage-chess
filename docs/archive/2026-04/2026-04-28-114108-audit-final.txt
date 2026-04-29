@@ -1,0 +1,739 @@
+ ▐▛███▜▌   Claude Code v2.1.112
+▝▜█████▛▘  Opus 4.7 (1M context) · Claude Max
+  ▘▘ ▝▝    ~/Workspace/4444J99/hokage-chess
+  ⎿  SessionStart:startup says: ℹ️ Warp plugin installed but you're not running in Warp terminal. Install Warp (https://warp.dev) to get native notifications when Claude completes tasks or needs input.
+
+  /remote-control is active · Code in CLI or at https://claude.ai/code/session_01CC7RjtgnV6DWf4srch5SQz
+
+❯ audit:::::''''''''                                                            
+                                                                                
+  ⏺ Pushed as e4ed095. Quick scan for residual brand-hardcoding in the other    
+    lib modules per the universal directive.                                    
+                                                                                
+    Searched for 1 pattern (ctrl+o to expand)                                   
+                                                                                
+  ⏺ e4ed095 shipped. Magnetic-force stream complete:                            
+                                                                                
+    Code (universal-parametric):                                                
+    - src/lib/content-strategy.ts refactored brand-neutral. ContentLexicon      
+    interface + DEFAULT_LEXICON (cross-domain emphasis + numeric stakes).       
+    SHORT_FORMAT constant. Logic processes chess / fitness / coaching /         
+    community titles identically.                                               
+    - vitest wired (test, test:watch). 4 files / 52 tests green.                
+    - Brand-coupled stub tests/index.test.ts deleted.                           
+                                                                                
+    Docs (binding artifacts):                                                   
+    - docs/rob/2026-04-28-rob-magnetic-manifest.md — universal template         
+    (parameter-set frontmatter), Rob-instantiated body. Maps Rob across the     
+    8-organ ORGANVM lattice (Theoria above, Ergon below,                        
+    Poiesis/Taxis/Logos/Koinonia/Kerygma lateral). Magnetism vector: one        
+    architecture, N manifest surfaces, single scoring loop.                     
+    - docs/business/2026-04-28-rob-homework-consolidation.md — 8 Rob-blocking   
+     asks at one durable address.                                               
+    - .claude/plans/2026-04-28-rob-world-allusions-sweep.md — plan persisted    
+    in-repo.                                                                    
+                                                                                
+    Residual brand-hardcoding noted for next pass (not in this commit):         
+    - src/lib/{analytics,growth,narrative}.ts — JSDoc strings reference         
+    HokageChess; logic is already universal. JSDoc-only fix.                    
+    - src/lib/engine.ts + src/lib/landing-engine/** — chess-coupled by design   
+     (CLI entry + chess landing-page product). These are product surfaces,      
+    not infrastructure. The directive about universalization applies to the     
+    scoring loop; these stay branded as they instantiate the figure rather      
+    than score it.                                                              
+                                                                                
+    ★ Insight ─────────────────────────────────────                             
+    The magnetism vector in §III of the manifest is the load-bearing claim: a   
+     multi-domain operator splits attention unless the four surfaces are        
+    visible expressions of one underlying architecture. Architecture = organs   
+     above/below/lateral. Single scoring loop = content-strategy.ts.            
+    Recurring formats = Bridge Content pillar. Multiply the three and           
+    attention concentrates rather than diffuses — that's the gravitational      
+    pull.                                                                       
+                                                                                
+    The reason the engine had to be universalized today (not deferred) is       
+    that a branded scoring loop weakens the magnetism. If the same scorer       
+    can't process a fitness reel and a coaching short, the                      
+    architectural-coherence factor in the magnetism formula collapses.          
+    Universalization is not cleanup — it's a structural prerequisite for the    
+    figure's gravitational integrity.                                           
+    ─────────────────────────────────────────────────                           
+                                                                                
+    Want the residual JSDoc pass on growth/analytics/narrative as a follow-up   
+     commit, or leave them as product-attribution markers?                      
+                                                                                
+  ✻ Worked for 7m 46s                                                           
+                                                                                
+  ※ recap: Goal: build Rob magnetic-force artifacts in hokage-chess. Shipped    
+    commit e4ed095 — universal content-strategy engine (52 tests green),        
+    magnetic manifest, homework consolidation. Next: confirm whether to strip   
+     residual HokageChess JSDoc from analytics/growth/narrative. (disable       
+    recaps in /config)                                                          
+                                                                                
+  ─────────────────────────────────────────────── rob-world-allusion-sweep ──   
+  ❯                                                                             
+  ───────────────────────────────────────────────────────────────────────────   
+    Press Ctrl-C again to exit                                                  
+                                                                                
+  Resume this session with:                                                     
+  claude --resume "rob-world-allusion-sweep"                                    
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;                                                  
+                                                                                
+  check completeness, audit, critique, thesis antithesis improve;;;;            
+  u reviewed every bolt by hand?;;;;;;;                                         
+  nearing week's session limit--design all current suggested forms for external 
+   brainstorming experimentation explorations and pre-work;                     
+
+⏺ Bash(git log --oneline -5 && echo "---" && git status)
+  ⎿  e4ed095 feat: Rob magnetic manifest + universal-parametric content eng
+     ine
+     fb482a0 docs: Phase A continuation — trinary review + avalanche protoc
+     … +10 lines (ctrl+o to expand)
+
+⏺ Bash(git show --stat e4ed095)
+  ⎿  commit e4ed095152353489b194659ec93bd9863180a32a
+     Author: 4444jPPP <etceter4@etceter4.com>
+     Date:   Tue Apr 28 10:04:09 2026 -0400
+     … +36 lines (ctrl+o to expand)
+
+⏺ Bash(npm test 2>&1 | tail -20)
+  ⎿  > hokage-chess@0.1.0 test
+     > vitest run
+     … +9 lines (ctrl+o to expand)
+
+  Searched for 4 patterns, read 6 files, listed 1 directory (ctrl+o to expand)
+
+⏺ I'll run an honest hand-audit, then build the external-pre-work forms.
+  Verifying first.
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+⏺ Audit complete. Now fixing bolts + producing external-pre-work form pack.
+
+⏺ Update(docs/rob/2026-04-28-rob-magnetic-manifest.md)
+  ⎿  Added 1 line, removed 1 line
+      66  
+      67  - BODI 4-Level Funnel (existing, Rob's lane).
+      68  - Hokage 4-Level Funnel (installed via cross-pollination diagno
+          sis).
+      69 -- `src/lib/content-strategy.ts` — universal-parametric scoring 
+         -engine, brand-neutral, accepts `ContentLexicon` per domain. 11/
+         -11 tests green, 2026-04-28. This file is the executable counter
+         -part to the magnetic figure.                                   
+      69 +- `src/lib/content-strategy.ts` — universal-parametric scoring 
+         +engine, brand-neutral, accepts `ContentLexicon` per domain. 52/
+         +52 tests green across 4 suites (analytics / content-strategy / 
+         +growth / narrative), 2026-04-28. This file is the executable co
+         +unterpart to the magnetic figure.                              
+      70  - Teamzy CRM (BODI side) + Discord (Hokage/community side) + fu
+          ture coaching CRM as L2-L3 retention vessels.
+      71  
+      72  **Lateral (Poiesis / Taxis / Logos / Koinonia / Kerygma):**
+
+⏺ Update(docs/business/2026-04-28-rob-homework-consolidation.md)
+  ⎿  Added 1 line, removed 1 line
+      56  - Hokage 4-Level Funnel architecture — `docs/business/2026-04-2
+          5-hokage-4-level-funnel-architecture.md`
+      57  - Pipeline GTM + trinary self-review — Phase A continuation com
+          mit `fb482a0`
+      58  - Apex Predator Lineage appendix — `docs/business/2026-04-25-ap
+          ex-predator-lineage-appendix.md`
+      59 -- Content-strategy scoring engine + tests — `src/lib/content-st
+         -rategy.ts`, `tests/content-strategy.test.ts` (11/11 green, 2026
+         --04-28)                                                        
+      59 +- Content-strategy scoring engine + tests — `src/lib/content-st
+         +rategy.ts`, `tests/content-strategy.test.ts` (52/52 green acros
+         +s analytics/content-strategy/growth/narrative suites, 2026-04-2
+         +8)                                                             
+      60  - LinkedIn Testament Post #1 — `docs/content/2026-04-27-linkedi
+          n-testament-post.md`
+      61  
+      62  The asymmetry is not "Anthony hasn't shipped." The asymmetry is
+           that the next batch of work needs Rob-only inputs (his content
+           reserve, his platform handles, his strategic acknowledgment, h
+          is recording time) before further compounding.
+
+⏺ Adding a parametric-lexicon test to prove the universalization claim is
+  exercised, then building the forms pack.
+
+⏺ Update(tests/content-strategy.test.ts)
+  ⎿  Added 6 lines, removed 1 line
+       5    evaluateIdea,
+       6    createUploadChecklist,
+       7    planWeek,
+       8 +  SHORT_FORMAT,                                                
+       9  } from "../src/lib/content-strategy";
+       9 -import type { VideoIdea, ThumbnailScore } from "../src/lib/cont
+         -ent-strategy";                                                 
+      10 +import type {                                                  
+      11 +  VideoIdea,                                                   
+      12 +  ThumbnailScore,                                              
+      13 +  ContentLexicon,                                              
+      14 +} from "../src/lib/content-strategy";                          
+      15  
+      16  describe("scoreTitleFormula", () => {
+      17    it("should score a perfect title as 3", () => {
+
+⏺ Update(tests/content-strategy.test.ts)
+  ⎿  Added 50 lines
+      149    });
+      150  });
+      151  
+      152 +describe("ContentLexicon parametrization", () => {            
+      153 +  const FITNESS_LEXICON: ContentLexicon = {                   
+      154 +    emphasis_words: ["finally", "actually", "secret"],        
+      155 +    stakes_verbs: ["squatted", "deadlifted", "broke"],        
+      156 +    stakes_nouns: ["PR", "rep", "macro"],                     
+      157 +    anti_patterns: [],                                        
+      158 +    max_title_length: 60,                                     
+      159 +  };                                                          
+      160 +                                                              
+      161 +  it("scores a fitness-domain title using a fitness lexicon", 
+          +() => {                                                       
+      162 +    const result = scoreTitleFormula("I FINALLY Squatted 405",
+          + FITNESS_LEXICON);                                            
+      163 +    expect(result.has_emotion).toBe(true);                    
+      164 +    expect(result.has_stakes).toBe(true);                     
+      165 +    expect(result.score).toBe(3);                             
+      166 +  });                                                         
+      167 +                                                              
+      168 +  it("falls back to ALL-CAPS emphasis when lexicon misses", ()
+          + => {                                                         
+      169 +    const empty: ContentLexicon = {                           
+      170 +      emphasis_words: [],                                     
+      171 +      stakes_verbs: [],                                       
+      172 +      stakes_nouns: [],                                       
+      173 +      anti_patterns: [],                                      
+      174 +      max_title_length: 60,                                   
+      175 +    };                                                        
+      176 +    const result = scoreTitleFormula("ROUTINE morning lift 225
+          +", empty);                                                    
+      177 +    expect(result.has_emotion).toBe(true);                    
+      178 +    expect(result.has_stakes).toBe(true);                     
+      179 +  });                                                         
+      180 +                                                              
+      181 +  it("respects domain-specific max_title_length", () => {     
+      182 +    const tight: ContentLexicon = {                           
+      183 +      emphasis_words: ["finally"],                            
+      184 +      stakes_verbs: ["beat"],                                 
+      185 +      stakes_nouns: [],                                       
+      186 +      anti_patterns: [],                                      
+      187 +      max_title_length: 20,                                   
+      188 +    };                                                        
+      189 +    const result = scoreTitleFormula("I finally beat 1500", ti
+          +ght);                                                         
+      190 +    expect(result.length_ok).toBe(true);                      
+      191 +    const tooLong = scoreTitleFormula("I finally beat the 1500
+          +-rated player", tight);                                       
+      192 +    expect(tooLong.length_ok).toBe(false);                    
+      193 +  });                                                         
+      194 +});                                                           
+      195 +                                                              
+      196 +describe("SHORT_FORMAT constant", () => {                     
+      197 +  it("is the literal scheduler treats specially", () => {     
+      198 +    expect(SHORT_FORMAT).toBe("short");                       
+      199 +  });                                                         
+      200 +});                                                           
+      201 +                                                              
+      202  describe("planWeek", () => {
+      203    it("should select best ideas for long-form and shorts", () =
+           > {
+      204      const ideas: VideoIdea[] = [
+
+⏺ Bash(npm test 2>&1 | tail -10)
+  ⎿   RUN  v4.1.5 /Users/4jp/Workspace/4444J99/hokage-chess
+     … +5 lines (ctrl+o to expand)
+
+⏺ Tests now 56/56. Now writing the external pre-work form pack — concrete
+  fill-out-of-session artifacts that map 1:1 to the 8 Rob blockers plus 2
+  internal compounds.
+
+⏺ Write(docs/business/forms/README.md)
+  ⎿  Wrote 47 lines to docs/business/forms/README.md
+       2 # Pre-Work Forms Pack
+       4 **Purpose:** Convert the eight Rob-blocking asks (and two intern
+         al compounds) into fill-out-of-session forms. Each form is singl
+         ete.ge, addressable, and produces a discrete artifact when compl
+       5 
+         der gives every open ask its own physical address. Fill any form
+         session.onously. Return as PR, comment, or paste-back into next 
+       7 
+       9 ---
+      10 ## Form index
+     … +68 lines (ctrl+o to expand)
+
+⏺ Acknowledged — no LaunchAgents, no plists. Forms are pure markdown. Continuing
+   the pack.
+⏺ Write(docs/business/forms/01-constellation-profile.md)
+  ⎿  Wrote 46 lines to docs/business/forms/01-constellation-profile.md
+       2 # Form 01 — Constellation Profile
+       3 **Owner:** Rob (validate) / Anthony (draft) | **Time:** 8-15 min
+       4 **Unblocks:** Cross-Demographic Systems Modeling validated at sc
+         ale; constellation-of-points usable as content substrate
+       6 > Five profiles exist (Adler, Negreanu, Freeman, Spencer, Mitro)
+         . 70 more required. This template is one fill = one profile. Dro
+         astname>.md`.opies into `docs/research/constellation/` named `<l
+       7 
+       9 ---
+      10 ## A. Identity (required)
+     … +55 lines (ctrl+o to expand)
+
+⏺ Write(docs/business/forms/02-boss-battle-archetype-pick.md)
+  ⎿  Wrote 30 lines to docs/business/forms/02-boss-battle-archetype-pick.md
+       2 # Form 02 — Boss Battle Episode 1 Archetype Pick
+       3 **Owner:** Rob | **Time:** 5 min | **One field returns the form*
+         *
+          Title / Echo Boss roster operationalized opens; Park / Online /
+       5 
+       6 ---
+       8 ## The decision
+       9 
+      10 Pick one archetype for Episode 1. Recommendation in **bold** — l
+         owest scheduling friction (no opponent coordination required).
+     … +26 lines (ctrl+o to expand)
+
+⏺ Write(docs/business/forms/03-teamzy-schema-disclosure.md)
+  ⎿  Wrote 49 lines to docs/business/forms/03-teamzy-schema-disclosure.md
+       2 # Form 03 — Teamzy Schema Disclosure
+       3 **Owner:** Rob | **Time:** 15 min
+          duplicating fields Teamzy already ownslayer specifiable without
+       5 
+       6 > Currently Anthony is designing funnel additions blind to what 
+         , or schema drift. Five minutes of disclosure here saves a week 
+         of remediation downstream.
+       8 ---
+       9 
+      10 ## A. Standard contact fields (check what exists)
+     … +46 lines (ctrl+o to expand)
+
+⏺ Write(docs/business/forms/04-premium-reel-inventory.md)
+  ⎿  Wrote 52 lines to docs/business/forms/04-premium-reel-inventory.md
+       2 # Form 04 — Premium Reel Inventory
+       3 **Owner:** Rob | **Time:** 20-40 min
+         d; §3.1 Premium Content Library specifiablection layer) populate
+       5 
+       6 > Inventory the reels that already exist on FB Page / IG / short
+         alog. Purpose: Anthony cannot architect L0 placement without kno
+         wing what exists.
+       8 ---
+       9 
+      10 ## A. FB Page reels
+     … +50 lines (ctrl+o to expand)
+
+⏺ Write(docs/business/forms/05-social-handles-confirmation.md)
+  ⎿  Wrote 35 lines to
+     docs/business/forms/05-social-handles-confirmation.md
+       2 # Form 05 — Social Handles Confirmation
+       3 **Owner:** Rob | **Time:** 2 min | **Single-decision form**
+       4 **Unblocks:** Distribution endpoints addressable; Kerygma POSSE 
+         plumbing terminates somewhere real
+       5 
+       6 ---
+       7 
+       8 ## The fields
+       9 
+      10 - **FB Page handle (canonical):** `@`
+     … +30 lines (ctrl+o to expand)
+
+⏺ Write(docs/business/forms/06-jutsu-slate-validation.md)
+  ⎿  Wrote 41 lines to docs/business/forms/06-jutsu-slate-validation.md
+       2 # Form 06 — Jutsu of the Week 12-Slate Validation
+       3 **Owner:** Rob | **Time:** 15 min
+       4 **Unblocks:** Episode 1 production; Tuesday recurring cadence lo
+       5 cks in
+       6 > The 12-week slate exists in `docs/content/2026-04-25-bridge-co
+         ntent-pillar.md`. This form validates / reorders / substitutes. 
+       7 Do not produce new content — only review and mark.
+       8 ---
+       9 
+      10 ## A. Per-week review
+     … +39 lines (ctrl+o to expand)
+
+⏺ Write(docs/business/forms/07-cross-pollination-acknowledgment.md)
+  ⎿  Wrote 33 lines to
+     docs/business/forms/07-cross-pollination-acknowledgment.md
+       2 # Form 07 — Cross-Pollination Diagnosis Acknowledgment
+       3 **Owner:** Rob | **Time:** 5 min | **Single-decision form**
+       4 **Unblocks:** Cross-pollination diagnosis canonized as reception
+         ubstratenorth star; future Rob conversations cite it as shared s
+       5 
+       6 ---
+       8 ## The framing (read once)
+       9 
+      10 The diagnosis in `docs/business/2026-04-25-cross-pollination-mas
+         ter-diagnosis.md` says:
+     … +37 lines (ctrl+o to expand)
+
+⏺ Write(docs/business/forms/08-jutsu-ep1-recording-checklist.md)
+  ⎿  Wrote 59 lines to
+     docs/business/forms/08-jutsu-ep1-recording-checklist.md
+       2 # Form 08 — Jutsu of the Week Episode 1 Recording Prep
+       3 **Owner:** Rob | **Time:** ~3 hr (production cycle)
+         r; produces test footage for content-strategy.ts scoring engine 
+         in real use
+       5 
+          as the production happens; check items as they complete. Depend
+         encies on forms 02 and 06 must clear first.
+       8 ---
+       9 
+      10 ## Pre-conditions (must be true before recording)
+     … +66 lines (ctrl+o to expand)
+
+⏺ Write(docs/business/forms/09-domain-lexicon-extension.md)
+  ⎿  Wrote 71 lines to docs/business/forms/09-domain-lexicon-extension.md
+       2 # Form 09 — Domain Lexicon Extension
+       3 **Owner:** Anthony or any operator extending the scoring engine 
+       4 **Unblocks:** `content-strategy.ts` specialized to a new domain 
+         (fitness, coaching, business, sport) without forking the engine
+       6 > The scoring engine accepts a `ContentLexicon` parameter. This 
+         form proposes one. Each filled form becomes a new exported lexic
+         r can import alongside `DEFAULT_LEXICON`.ICON`) that any operato
+       7 
+       9 ---
+      10 ## A. Domain identification
+     … +79 lines (ctrl+o to expand)
+
+⏺ Write(docs/business/forms/10-magnetism-measurement-card.md)
+  ⎿  Wrote 61 lines to docs/business/forms/10-magnetism-measurement-card.md
+       2 # Form 10 — Magnetism Measurement Card
+       4 **Unblocks:** Operationalizes the rhetorical magnetism formula f
+         rom the manifest into a measured weekly signal — converts thesis
+       5  into evidence
+       6 > The manifest §III claims **Magnetism = (architectural coherenc
+         ten this is unfalsifiable. This card defines a measurable proxy 
+         s being rhetoric.nd a weekly capture cadence so the formula stop
+       7 
+       9 ---
+      10 ## Week of: ____________
+     … +71 lines (ctrl+o to expand)
+
+⏺ Bash(npm test 2>&1 | tail -6 && echo "---" && ls docs/business/forms/)
+  ⎿   Test Files  4 passed (4)
+           Tests  56 passed (56)
+        Start at  10:41:24
+     … +15 lines (ctrl+o to expand)
+
+⏺ Bash(git add -A && git status --short)
+  ⎿  M  docs/business/2026-04-28-rob-homework-consolidation.md
+     A  docs/business/forms/01-constellation-profile.md
+     A  docs/business/forms/02-boss-battle-archetype-pick.md
+     … +11 lines (ctrl+o to expand)
+
+⏺ Bash(git commit -m "$(cat <<'EOF'
+      audit: tighten manifest bolts + ship external pre-work form pack…)
+  ⎿  [main 53bcd32] audit: tighten manifest bolts + ship external pre-work
+     form pack
+      14 files changed, 582 insertions(+), 3 deletions(-)
+     … +14 lines (ctrl+o to expand)
+
+⏺ Bash(git push 2>&1 | tail -5)
+  ⎿  │  No config files with names ["lefthook" ".lefthook" ".config/lefthoo
+     k"] have been found in "/Users/4jp/Workspace/4444J99/hokage-chess"
+     To github.com:4444J99/hokage-chess.git
+        e4ed095..53bcd32  main -> main
+
+⏺ Audit + fix shipped as 53bcd32 (pushed). Summary:
+
+  Did I review every bolt by hand? No — caught these on this pass
+
+  Loose bolt: Stale "11/11 tests green"
+  Where: manifest §II + homework §completed
+  Fix: Updated to 52/52 (now 56/56 after this commit)
+  ────────────────────────────────────────
+  Loose bolt: ContentLexicon parametric claim was untested
+  Where: engine had param, tests only used defaults
+  Fix: Added fitness-lexicon test suite (3 tests)
+  ────────────────────────────────────────
+  Loose bolt: SHORT_FORMAT exported but unused in tests
+  Where: engine.ts vs test.ts
+  Fix: Added direct constant test
+  ────────────────────────────────────────
+  Loose bolt: stakes_nouns defaults are chess-biased
+    ("championship/tournament/rival")
+  Where: content-strategy.ts:120
+  Fix: Documented, not fixed — true universal default = empty array;
+    chess-flavored defaults are pragmatic compromise. Flagged for next pass
+  ────────────────────────────────────────
+  Loose bolt: Manifest §V claims ${FIGURE.name} parametricity but no engine
+    templates it
+  Where: manifest is manually-instantiated
+  Fix: Acknowledged: structural template, not mechanized — fine as a doc
+    convention
+  ────────────────────────────────────────
+  Loose bolt: JSDoc-only HokageChess refs in analytics/growth/narrative/engine
+  Where: 6 lines total, logic universal
+  Fix: Deferred (cosmetic, single-line each)
+
+  Thesis / Antithesis / Improve
+
+  - Thesis (manifest §III): magnetism = coherence × formats × scoring loop.
+  Multi-domain operator concentrates attention if architecture is shared.
+  - Antithesis: as written, formula is unfalsifiable. No metric for any factor.
+  Could be self-fulfilling rhetoric.
+  - Improve: Form 10 (magnetism measurement card) defines proxy metrics —
+  coherence count, active-format count, score-to-publish ratio — captured
+  weekly. A flat/declining series falsifies the manifest. Without form 10, §III
+  is rhetoric; with it, §III is a hypothesis with a weekly test.
+
+  External pre-work pack — docs/business/forms/
+
+  Eleven files. Each form is single-page, fillable asynchronously, addressable.
+  Maps 1:1 to the 8 Rob blockers + 2 internal compounds:
+
+  01 constellation profile         — Rob/Anthony, ×70 (parallelizable)
+  02 Boss Battle Ep 1 pick         — Rob, 5 min, single decision  ⚡ low effort
+  03 Teamzy schema disclosure      — Rob, 15 min
+  04 premium reel inventory        — Rob, 20-40 min
+  05 social handles confirmation   — Rob, 2 min, single decision  ⚡ low effort
+  06 Jutsu 12-slate validation     — Rob, 15 min
+  07 cross-pollination ack         — Rob, 5 min, single decision  ⚡ low effort
+  08 Jutsu Ep 1 recording prep     — Rob, ~3hr (production)
+  09 domain lexicon extension      — Anthony or any operator
+  10 magnetism measurement card    — Anthony, weekly
+
+  Lowest-effort path: 02 → 05 → 07 clears 3 of 8 Rob-blockers in ~12 minutes 
+  total. Form 09 + 10 close the loop on the manifest's universality + magnetism
+  claims by making each measurable.
+
+  Residual (next session, if relevant)
+
+  1. Make stakes_nouns default empty; export CHESS_LEXICON as a domain
+  instantiation. Cleanest universalization.
+  2. Strip 6 JSDoc HokageChess refs across analytics/growth/narrative/engine —
+  cosmetic.
+  3. The manifest's §V parametric template could be mechanized via a small
+  template-render script if it gets used twice.
+
+  Tests: 56/56 across 4 suites. Working tree clean. Pushed.
+
+✻ Brewed for 7m 5s
+※ recap: Goal was auditing the e4ed095 magnetic-manifest commit and designing external pre-work forms. Shipped commit 53bcd32 fixing stale test counts, adding parametric lexicon tests (56/56 green), and 10 fillable forms. Next: hand forms 02, 05, 07 to Rob for 12-minute clear of three blockers. (disable recaps in /config)
+
+❯ provide domain and persona workstreams for ai-sessions (dont name them by     
+  brand but do define strengths required and so forth                           
+
+⏺ Designing the workstream catalog. Vendor-agnostic — strength profile, not
+  brand.
+
+⏺ Write(docs/business/workstreams/README.md)
+  ⎿  Wrote 313 lines to docs/business/workstreams/README.md
+      2 # AI-Session Workstreams — Domain × Persona Catalog
+      3 **Date:** 2026-04-28
+        be spun up between main-session check-ins. Each workstream is **v
+        endor-agnostic** — defined by *strength profile*, not by which mo
+        er instance fits best.s it. Match the strength profile to whichev
+      5 
+        adjacent) generates more cognitive surface area than one session 
+        can hold. Workstreams partition that surface so multiple sessions
+        lf-contained, has a known input shape, a known output shape, and 
+        a known
+     … +514 lines (ctrl+o to expand)
+
+⏺ Bash(git add -A && git commit -m "$(cat <<'EOF'
+      docs: AI-session workstream catalog (vendor-agnostic)…)
+  ⎿  [main 1bb4e79] docs: AI-session workstream catalog (vendor-agnostic)
+      1 file changed, 313 insertions(+)
+      create mode 100644 docs/business/workstreams/README.md
+     … +4 lines (ctrl+o to expand)
+
+⏺ Shipped as 1bb4e79 (pushed). docs/business/workstreams/README.md.
+
+  The 10 workstreams (vendor-agnostic — strength profile, not brand)
+
+  #: 01
+  Workstream: Mechanic Extractor
+  Domain: Research
+  Persona shape: Cold-eyed pattern-finder; refuses biography
+  Top 2 required strengths: Comparative reading; mechanism abstraction
+  ────────────────────────────────────────
+  #: 02
+  Workstream: Lineage Cartographer
+  Domain: Research
+  Persona shape: Taxonomist of rivalry; ports structure not surface
+  Top 2 required strengths: Cross-domain pattern matching; mythic literacy
+    without inflation
+  ────────────────────────────────────────
+  #: 03
+  Workstream: Hook Sharpener
+  Domain: Production
+  Persona shape: Merciless editor; runs the scorer as a literal gate
+  Top 2 required strengths: Fast iteration (5-10 variants/pass); statistical
+  feel
+    for emphasis+stakes
+  ────────────────────────────────────────
+  #: 04
+  Workstream: Polyglot Re-cutter
+  Domain: Distribution
+  Persona shape: Multilingual translator across platform grammars
+  Top 2 required strengths: Platform-native idiom; tone-shift without
+    identity-shift
+  ────────────────────────────────────────
+  #: 05
+  Workstream: Vocabulary Cartographer
+  Domain: Engine
+  Persona shape: Linguist who maps domain dialect
+  Top 2 required strengths: Linguistic pattern recognition; regex fluency;
+    lexicon discipline (≤15 words)
+  ────────────────────────────────────────
+  #: 06
+  Workstream: Funnel Geologist
+  Domain: Strategy
+  Persona shape: Layer-separator; reads funnel as stratified rock
+  Top 2 required strengths: Systems thinking; resistance to layer-mixing
+  ────────────────────────────────────────
+  #: 07
+  Workstream: Diagnostician
+  Domain: Strategy
+  Persona shape: Doctor of asymmetries between adjacent domains
+  Top 2 required strengths: Contradiction detection; transplant-risk assessment
+  ────────────────────────────────────────
+  #: 08
+  Workstream: Hearth Keeper
+  Domain: Community
+  Persona shape: Keeper of small recurring fires
+  Top 2 required strengths: Conversational cadence; ritual-form preservation
+  ────────────────────────────────────────
+  #: 09
+  Workstream: Cold Auditor
+  Domain: Measurement
+  Persona shape: Counter who refuses inflation
+  Top 2 required strengths: Resistance to flattery; comfort with falsification
+  ────────────────────────────────────────
+  #: 10
+  Workstream: Adversarial Reader
+  Domain: Quality
+  Persona shape: Reader who assumes loose bolts
+  Top 2 required strengths: Skepticism toward narratives; verification
+  discipline
+
+  Each entry in the doc has: domain, persona, strengths required, anti-strengths
+   (disqualifying), inputs, outputs, cadence, hand-off conditions, failure
+  modes, and a self-contained prompt prelude that spins the workstream up cold
+  without prior conversation history.
+
+  Selection rule
+
+  Match task → strength profile, not familiarity. One persona per session —
+  mixing corrupts both (the Cold Auditor and the Hearth Keeper are not friends).
+   Routing matrix at the top of the doc maps task-shape → workstream so a
+  triaged ask is one lookup away from the right session.
+
+  Closing distinction (from the doc)
+
+  ▎ A role is who you are. A persona is how you read the work. A strength 
+  ▎ profile is what you can actually do. Picking by role alone admits any 
+  ▎ researcher; persona constrains voice; strength profile constrains output. 
+  ▎ All three together produce magnetic-figure-grade work. Two produce competent
+  ▎  work. One produces fluent slop.
+
+  Two commits this turn — 53bcd32 (audit + form pack) and 1bb4e79 (workstream
+  catalog). Both pushed. Tests 56/56. Working tree clean.
+
+✻ Churned for 3m 32s
+
+※ recap: Goal: build Rob magnetic-figure substrate in hokage-chess. Shipped audit fixes plus 10-form pre-work pack and 10 vendor-agnostic AI-session workstreams (commits 53bcd32, 1bb4e79). Next: confirm whether to spin up workstream 01 (Mechanic Extractor) on the 70 open constellation profiles. (disable recaps in /config)
+
+❯ group them into sequenced clusters                                            
+
+⏺ Write(docs/business/workstreams/sequencing.md)
+  ⎿  Wrote 176 lines to docs/business/workstreams/sequencing.md
+      1 # Workstream Sequencing — Five Clusters
+      2 
+      3 **Date:** 2026-04-28
+      4 **Companion to:** `README.md` (catalog of 10 workstreams)
+      5 **Purpose:** Group the 10 workstreams into dependency-aware clust
+        ers and define the sequence in which they should be activated.
+      6 
+      7 ---
+      8 
+      9 ## The five clusters at a glance
+     … +238 lines (ctrl+o to expand)
+
+⏺ Bash(git add -A && git commit -m "$(cat <<'EOF'
+      docs: workstream sequencing — 5 dependency-aware clusters…)
+  ⎿  [main 0a31116] docs: workstream sequencing — 5 dependency-aware cluste
+     rs
+      1 file changed, 176 insertions(+)
+     … +5 lines (ctrl+o to expand)
+
+⏺ Shipped as 0a31116 (pushed). docs/business/workstreams/sequencing.md.
+
+  The five sequenced clusters
+
+  A. Engine Substrate ──┐
+     (must run first)   │
+                        ▼
+  B. Research          C. Strategy ──┐
+     (parallel,          (signal-    │
+      steady-state)      triggered)  ▼
+                                    D. Production Loop ──┐
+                                       (continuous)      │
+                                                         ▼
+                                                       E. Quality
+                                                         │
+                                         (E loops back to A/C/D)
+
+  ┌─────────────┬────────────────────┬──────────────────┬──────────────────┐
+  │   Cluster   │    Workstreams     │       Role       │     Cadence      │
+  ├─────────────┼────────────────────┼──────────────────┼──────────────────┤
+  │             │ 05 Vocabulary      │ Defines lexicons │                  │
+  │ A. Engine   │ Cartographer · 02  │  + named-rivalry │ Once per domain  │
+  │ Substrate   │ Lineage            │  rosters         │                  │
+  │             │ Cartographer       │                  │                  │
+  ├─────────────┼────────────────────┼──────────────────┼──────────────────┤
+  │ B. Research │ 01 Mechanic        │ Constellation    │ Steady-state,    │
+  │  Substrate  │ Extractor (×70)    │ profile fill     │ parallel         │
+  ├─────────────┼────────────────────┼──────────────────┼──────────────────┤
+  │ C. Strategy │ 06 Funnel          │ Architecture     │                  │
+  │  Layer      │ Geologist · 07     │ iteration        │ Signal-triggered │
+  │             │ Diagnostician      │                  │                  │
+  ├─────────────┼────────────────────┼──────────────────┼──────────────────┤
+  │ D.          │ 03 Hook Sharpener  │ Continuous       │                  │
+  │ Production  │ · 04 Polyglot      │ content          │ Per-publish +    │
+  │ Loop        │ Re-cutter · 08     │ production       │ weekly           │
+  │             │ Hearth Keeper      │                  │                  │
+  ├─────────────┼────────────────────┼──────────────────┼──────────────────┤
+  │ E. Quality  │ 09 Cold Auditor ·  │ Audit + measure  │ Per-session +    │
+  │ / Closure   │ 10 Adversarial     │ + gate           │ weekly           │
+  │             │ Reader             │                  │                  │
+  └─────────────┴────────────────────┴──────────────────┴──────────────────┘
+
+  Critical path
+
+  A → (C ‖ D) → E → loop. B runs orthogonal — does not gate the critical path;
+  compounds the value of every step on it as it fills.
+
+  Sprint sequence
+
+  - Sprint 0 (this week): Activate A — Vocabulary Cartographer drafts
+  FITNESS_LEXICON; Lineage Cartographer drafts fitness apex-predator roster.
+  - Sprint 1 (week 1-2): Activate D production (gated on A + Rob homework forms
+  05/06). C iterates as forms 03/04/07 return.
+  - Steady state: B parallel profile drafts (≥5/week target); E weekly Cold
+  Auditor + per-session Adversarial Reader.
+
+  Anti-patterns named
+
+  1. Starting D before A — Hook Sharpener falls back to DEFAULT_LEXICON, loses
+  domain fidelity.
+  2. Skipping E — output ships unaudited; magnetism stays unfalsifiable.
+  3. Treating B as blocking — it's parallel substrate, not a gate.
+  4. Mixing clusters in one session — persona shift between Cartographer and
+  Hook Sharpener corrupts both.
+
+  Magnetism formula upgrade
+
+  Manifest §III was 3-factor. With clusters operating, it extends to 4 factors 
+  mapping 1:1 to clusters:
+
+  ▎ Magnetism = (coherence · C) × (formats · D) × (scoring loop · A) × 
+  ▎ (substrate density · B), measured by E
+
+  Substrate density is latent until B reaches ~50/75. At that threshold the
+  constellation framework flips from substrate to multiplier — the second-order 
+  magnetism gain that justifies B's parallel investment.
+
+  Three commits this session: 53bcd32 audit + forms · 1bb4e79 workstream catalog
+   · 0a31116 sequencing. Tests 56/56. Working tree clean.
+
+✻ Churned for 2m 10s

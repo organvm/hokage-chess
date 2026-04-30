@@ -207,3 +207,31 @@ User-directed full ingest+digest pass with the 9-step Evaluation-to-Growth frame
 **Memory captures:** 3 new entries in `~/.claude/projects/-Users-4jp-Workspace-4444J99-hokage-chess/memory/` (eval-to-growth artifact, dead-link finding, bounding-contract feedback) + MEMORY.md index updated.
 
 **Tier A user-decisions surfaced (carrying forward):** dead-link fix (option a or b) · manifest `EXCLUDED_DIRS` patch · `seed.yaml` vacuum closure (`produces`/`consumes`/`last_validated`/`dual_purpose`) · GH issue creation for review §9.2 P0 items.
+
+### Stream D 2026-04-30-late (`S-2026-04-30-client-separation-substrate`)
+
+User-pasted Maddie-intent session-export ("Editing flow: vacuum gate, quiz copy, and CTA plan", `ses_21fd26adfffermWYH45QGFy0P4`) into a Hokage-scoped chat triggered articulation of containment topology. Doc-only session, no `src/` perturbation.
+
+**Shipped (commit `27c50f4`, pushed origin/main):**
+- `docs/governance/client-separation-substrate.md` (NEW) — v0 substrate: 4 zones, R1 routing, live-paste rule, triage protocol, audit log
+- `CLAUDE.md` — `## Client-Separation Substrate` anchor section
+- `.claude/plans/2026-04-30-client-separation-substrate.md` (mirror of `~/.claude/plans/upon-submitting-maddie-asks-robust-fern.md`)
+
+**Triage events (off-repo, gitignored, not in commit):**
+- `session-ses_21fd.md` (84 KB) → `~/.local/share/hokage-chess/operational/exports/2026-04-30-165616-…-ses_21fd26adfff.md`
+- `Untitled-1.md` (2186 B, audit-pass discovery, cross-stream content) → `~/.local/share/workspace/operational/exports/2026-04-28-013516-universe-overlap-cross-stream-untitled-1.md`
+- `export-20260427203906.md` (121 KB, audit-pass discovery, Rob CWD Gemini session) → `~/.local/share/hokage-chess/operational/exports/2026-04-28-013516-find-drive-files-domain-gemini-export.md`
+
+**Memory captures:** `feedback_client_separation_substrate.md` + MEMORY.md index updated. Substrate-rule only — no Maddie session content quoted into Hokage auto-memory.
+
+**Vacuums atomized (deferred / out-of-stream):**
+- V-A Phase 2 — pre-commit guard for hokage-chess (cross-client keyword hook); IRF candidate
+- V-B Phase 3 — substrate-doc canonical-home promotion to `meta-organvm/governance/` + seed.yaml schema normalization (`metadata.client` vs top-level `client:`); IRF candidate
+- V-C Phase 4 — conductor MCP scope-binding (`conductor_session_start` requires `client` param when CWD ∈ client tree); IRF candidate
+- V-D Maddie-side parallel substrate doc — sister stream needs same governance via Phase 3
+- V-E Cross-scope conventions reconciliation (Maddie's `feedback_stream_repo_alignment` says transcripts → `<repo>/docs/archive/`; this substrate says full transcripts → `~/.local/share/<stream>/operational/exports/`). Phase 3 territory.
+- V-F Chezmoi mirror of `~/.local/share/hokage-chess/operational/` (carried over from 2026-04-29-late line 246; orphan triage added a 4th file — more pressing)
+
+**IRF candidate (NET-NEW, surfaced for Stream-H Gate):** Client-separation substrate row. Domain: META/governance. Priority: P1.
+
+**Verified at session close:** working tree clean · 0:0 origin parity · auto-memory hygiene held (no Maddie content quoted) · live-paste rule self-applied · zero overwrites / zero `--no-verify` / zero IRF-body writes / zero DONE-counter writes / zero cross-repo writes.

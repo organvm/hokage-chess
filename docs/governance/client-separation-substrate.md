@@ -122,6 +122,10 @@ These already exist; the substrate composes them rather than reinventing.
 | Date | Event | Action | Reference |
 |------|-------|--------|-----------|
 | 2026-04-30 | First triggering bleed (ask-Maddie-receive-Rob) | Orphan moved per R1 to Rob ops tree | `~/.local/share/hokage-chess/operational/exports/2026-04-30-165616-editing-flow-vacuum-gate-quiz-cta-ses_21fd26adfff.md` |
+| 2026-04-30 (audit pass) | Discovered `Untitled-1.md` at Rob root — explicit cross-stream content (Universe Overlap M ∩ R, references both Maddie and Rob paths) | Orphan moved per R1 to workspace ops tree (cross-stream) | `~/.local/share/workspace/operational/exports/2026-04-28-013516-universe-overlap-cross-stream-untitled-1.md` |
+| 2026-04-30 (audit pass) | Discovered `export-20260427203906.md` at Rob root — Gemini session in Rob CWD, Hokage primary focus | Orphan moved per R1 to Rob ops tree | `~/.local/share/hokage-chess/operational/exports/2026-04-28-013516-find-drive-files-domain-gemini-export.md` |
+
+**Cross-scope schema drift noted:** Maddie scope's auto-memory `feedback_stream_repo_alignment.md` declares conversation transcripts route to `<repo>/docs/archive/YYYY-MM/` (in-repo, git-tracked). This substrate (and the prior 2026-04-29 sort that established it) routes full transcripts to `~/.local/share/<stream>/operational/exports/` (off-repo, gitignored). The Maddie memory was authored after the off-repo convention was established (it references "auto-commit pipeline … observed 2026-04-30"), so the convention divergence is genuine and unresolved. Phase 3 normalization should choose one or formalize a summary-vs-full-transcript split.
 
 ## Phase 2 — Pre-commit guard (deferred)
 

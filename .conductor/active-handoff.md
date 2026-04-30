@@ -299,3 +299,51 @@ The dispatcher set up Rob and Maddie as parallel sessions assuming peer scope. T
 **Cross-stream signals (still standing from 2026-04-29 stream-D close-out):** §A.4 / §A.5 / §A.6 / §A.7 of `docs/archive/2026-04/gemini-2026-04-28-refactored-workstreams.md` are Maddie-relevant. Repo lock honored; not cross-written.
 
 **Hall-monitor self-audit (this session):** zero overwrites, zero `--no-verify`, zero IRF-body writes, zero DONE-counter writes, zero out-of-repo writes. One preemptive GH issue creation attempted and DENIED by hooks — recovered correctly by surfacing as user-decision question. All gates green.
+
+---
+
+## 2026-04-30-late close-out note (client-separation substrate)
+
+**Session ID:** `S-2026-04-30-client-separation-substrate`
+**Trigger:** User pasted a Maddie-intent session-export ("Editing flow: vacuum gate, quiz copy, and CTA plan", `ses_21fd26adfffermWYH45QGFy0P4`) into a Hokage-scoped chat. Containment realization: client info must never bleed across clients or into public surfaces.
+**Mode:** Plan → Auto execution; doc-only changes.
+
+**Shipped (commit `27c50f4`, pushed origin/main):**
+- `docs/governance/client-separation-substrate.md` (NEW, 151 → 156 lines after audit-log extension) — v0 substrate: 4 zones (`public:all` / `(me)` / `{client:rob}` / `{client:maddie}`), flow rules, R1 routing (by content / scope-of-generation), live-paste rule, triage protocol, audit log, deferred phases
+- `CLAUDE.md` — `## Client-Separation Substrate` anchor section pointing at the substrate doc
+- `.claude/plans/2026-04-30-client-separation-substrate.md` (mirror of `~/.claude/plans/upon-submitting-maddie-asks-robust-fern.md`)
+- `~/.claude/projects/-Users-4jp-Workspace-4444J99-hokage-chess/memory/feedback_client_separation_substrate.md` + MEMORY.md index entry — rule captured, no Maddie session content quoted
+
+**Triage events (off-repo; gitignored ops trees, durable, no commit):**
+- `session-ses_21fd.md` (84 KB, the trigger) → `~/.local/share/hokage-chess/operational/exports/2026-04-30-165616-editing-flow-vacuum-gate-quiz-cta-ses_21fd26adfff.md` per R1
+- `Untitled-1.md` (2186 B, audit-pass discovery — Universe Overlap M ∩ R cross-stream content) → `~/.local/share/workspace/operational/exports/2026-04-28-013516-universe-overlap-cross-stream-untitled-1.md` per R1
+- `export-20260427203906.md` (121 KB, audit-pass discovery — Gemini session in Rob CWD) → `~/.local/share/hokage-chess/operational/exports/2026-04-28-013516-find-drive-files-domain-gemini-export.md` per R1
+
+**Cross-scope schema drift surfaced:** Maddie scope's `feedback_stream_repo_alignment.md` routes conversation transcripts to `<repo>/docs/archive/YYYY-MM/` (in-repo). The substrate doc + the 2026-04-29 sort route full transcripts to `~/.local/share/<stream>/operational/exports/` (off-repo). Two clients hold different conventions for the same artifact class. Phase 3 normalization required.
+
+**N/A vacuums atomized this session (logged here for next-session pickup):**
+- V-A — Phase 2 pre-commit guard for hokage-chess (cross-client keyword hook). IRF candidate.
+- V-B — Phase 3 workspace promotion of substrate doc (canonical home is `meta-organvm/governance/`, not Rob's repo) + seed.yaml schema normalization (Rob's `metadata.client` vs Maddie's top-level `client:`). IRF candidate.
+- V-C — Phase 4 conductor MCP scope-binding (require `client` parameter in `conductor_session_start`; reject prompts without explicit client scope when CWD belongs to a client tree). IRF candidate.
+- V-D — Maddie-side parallel substrate doc (sister stream needs the same governance — via Phase 3 promotion). Out-of-stream; surface to user.
+- V-E — Cross-scope conventions reconciliation (Maddie's `feedback_stream_repo_alignment` vs this substrate). Phase 3 territory.
+- V-F — Chezmoi mirror of `~/.local/share/hokage-chess/operational/` (already noted in 2026-04-29-late close-out at line 246; orphan triage just added a 4th file there, more pressing now).
+
+**IRF candidate (NET-NEW, surfaced for Stream-H Gate, NOT authored by this stream):** Client-separation substrate as a meta-governance row. Domain: META / governance. Priority: P1 (the substrate is documented and v0-shipped; promotion to canonical home is the open work). Source session: this one. No DONE-counter claim from this stream.
+
+**Verified state at this turn's close:**
+- Working tree: clean after substrate doc audit-log extension + this handoff append + HANDOFF.md append commit
+- Origin sync: all commits pushed to `origin/main`; local:remote = 1:1
+- Tests + build: NOT re-run this turn (doc-only changes; CLAUDE.md baseline says re-run only on `src/` touches; nothing in `src/` was modified)
+- Auto-memory: 1 new feedback memory + 1 MEMORY.md index line, both substrate-rule scope only (no Maddie content quoted)
+
+**Hall-monitor self-audit (this session):**
+- ✓ Zero overwrites — every change additive (substrate doc audit-log extension is append-rows; CLAUDE.md got a new section; MEMORY.md got a new index line; this handoff got an appended close-out note; HANDOFF.md likewise)
+- ✓ Zero `--no-verify` — gitleaks ran clean on commit `27c50f4`
+- ✓ Zero IRF-body writes — Stream H Gate respected
+- ✓ Zero DONE-counter writes — none claimed from this stream
+- ✓ Zero cross-scope writes to Maddie's repo — repo lock respected
+- ✓ Live-paste rule self-applied — the pasted Maddie session content was not operationalized as Hokage code; the rule was distilled and the body was not absorbed into Rob auto-memory
+- ✓ Two additional orphans found (audit pass) and triaged to correct ops trees per R1
+- ✓ Push complete; nothing local-only
+- ⚠ One soft gap: gitleaks would scan a base64-looking substring near the end of `export-20260427203906.md` if anyone tried to commit it. Pre-existing `.gitignore` pattern (`export-*.md`) prevents that; off-repo durable storage is the correct destination per substrate.

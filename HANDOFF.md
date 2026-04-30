@@ -5,6 +5,30 @@ Previous session built the full Hokage Chess client project (market gap analysis
 
 ---
 
+## Vacuum Namespace Index
+
+This file tracks two distinct vacuum namespaces from different originating sessions. They share the word "vacuum" but are otherwise unrelated — each was atomized for a different concern.
+
+| Namespace | Origin date | Source | Topic | Tracking |
+|-----------|-------------|--------|-------|----------|
+| **V1–V10** | 2026-04-25 | hokage-chess unified strategy session | Landing deploy, ORGANVM registration, Kit wiring, Discord, Cloudflare, etc. | Inline in this file (Groups 1–5 below); V7 = [#46](https://github.com/4444J99/hokage-chess/issues/46), V8 = [#45](https://github.com/4444J99/hokage-chess/issues/45) already promoted to GH |
+| **V-A through V-F** | 2026-04-30 | client-separation substrate v0 (commit `27c50f4`) | Substrate Phases 2–4, sister-stream parity, conventions reconciliation, off-repo durability | All promoted to GH issues 2026-04-30 (see map below) |
+
+**V-A..V-F → GH issue map:**
+
+| Vacuum | Issue | Priority | What |
+|--------|-------|----------|------|
+| V-A | [#47](https://github.com/4444J99/hokage-chess/issues/47) | P1 | Phase 2 pre-commit guard (cross-client keyword bleed) |
+| V-B | [#48](https://github.com/4444J99/hokage-chess/issues/48) | P2 | Phase 3 canonical-home promotion + seed.yaml schema normalization |
+| V-C | [#49](https://github.com/4444J99/hokage-chess/issues/49) | P2 | Phase 4 conductor MCP scope-binding |
+| V-D | [#50](https://github.com/4444J99/hokage-chess/issues/50) | P1 | Maddie-side parallel substrate (tracking proxy — actual work on Maddie repo) |
+| V-E | [#51](https://github.com/4444J99/hokage-chess/issues/51) | P2 | Cross-scope conventions reconciliation (transcript-routing drift) |
+| V-F | [#52](https://github.com/4444J99/hokage-chess/issues/52) | P1 | Chezmoi mirror of `~/.local/share/hokage-chess/operational/` |
+
+Query both at once: `gh issue list --repo 4444J99/hokage-chess --label agent-fix`
+
+---
+
 ## Group 1: SHIP THE LANDING PAGE
 **Priority**: HIGH — this is the thing Rob can see and share TODAY
 **Vacuums**: V6, V7, V8
@@ -224,13 +248,13 @@ User-pasted Maddie-intent session-export ("Editing flow: vacuum gate, quiz copy,
 
 **Memory captures:** `feedback_client_separation_substrate.md` + MEMORY.md index updated. Substrate-rule only — no Maddie session content quoted into Hokage auto-memory.
 
-**Vacuums atomized (deferred / out-of-stream):**
-- V-A Phase 2 — pre-commit guard for hokage-chess (cross-client keyword hook); IRF candidate
-- V-B Phase 3 — substrate-doc canonical-home promotion to `meta-organvm/governance/` + seed.yaml schema normalization (`metadata.client` vs top-level `client:`); IRF candidate
-- V-C Phase 4 — conductor MCP scope-binding (`conductor_session_start` requires `client` param when CWD ∈ client tree); IRF candidate
-- V-D Maddie-side parallel substrate doc — sister stream needs same governance via Phase 3
-- V-E Cross-scope conventions reconciliation (Maddie's `feedback_stream_repo_alignment` says transcripts → `<repo>/docs/archive/`; this substrate says full transcripts → `~/.local/share/<stream>/operational/exports/`). Phase 3 territory.
-- V-F Chezmoi mirror of `~/.local/share/hokage-chess/operational/` (carried over from 2026-04-29-late line 246; orphan triage added a 4th file — more pressing)
+**Vacuums atomized — now triple-referenced (HANDOFF + active-handoff + GH issues, 2026-04-30 evening):**
+- V-A → [#47](https://github.com/4444J99/hokage-chess/issues/47) — Phase 2 pre-commit guard (cross-client keyword bleed)
+- V-B → [#48](https://github.com/4444J99/hokage-chess/issues/48) — Phase 3 substrate-doc canonical-home promotion + seed.yaml schema normalization
+- V-C → [#49](https://github.com/4444J99/hokage-chess/issues/49) — Phase 4 conductor MCP scope-binding (`conductor_session_start` requires `client` param when CWD ∈ client tree)
+- V-D → [#50](https://github.com/4444J99/hokage-chess/issues/50) — Maddie-side parallel substrate (tracking proxy on this repo; actual work lands on `organvm/sovereign-systems--elevate-align`)
+- V-E → [#51](https://github.com/4444J99/hokage-chess/issues/51) — Cross-scope conventions reconciliation (transcript-routing drift between Maddie convention and this substrate)
+- V-F → [#52](https://github.com/4444J99/hokage-chess/issues/52) — Chezmoi mirror of `~/.local/share/hokage-chess/operational/` (P1, escalated 2026-04-30 — orphan triage added a 4th file)
 
 **IRF candidate (NET-NEW, surfaced for Stream-H Gate):** Client-separation substrate row. Domain: META/governance. Priority: P1.
 

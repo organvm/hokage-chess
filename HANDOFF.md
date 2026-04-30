@@ -153,7 +153,7 @@ to dated versions before syncing.
 |---|--------|-------|--------|
 | V1 | No seed.yaml | Group 2 | DONE 2026-04-25 (commit `b544076`) |
 | V2 | Not in registry | Group 2 | DONE 2026-04-25 (commit `e68933d` in `meta-organvm/organvm-corpvs-testamentvm`) |
-| V3 | No GitHub issues | Group 2 | IN PROGRESS — issues #44 (PRT-046) opened 2026-04-29; V7/V8 issues to follow this session |
+| V3 | No GitHub issues | Group 2 | IN PROGRESS — #44 (PRT-046) + #45 (V8 Vercel) + #46 (V7 Kit) opened 2026-04-29; new findings (dead-link `/pillars/<slug>`, manifest `EXCLUDED_DIRS` patch) registered in `docs/reviews/2026-04-30-eval-to-growth-master.md` §9.2 P0 — not yet GH-issued |
 | V4 | PDE skill not built | Group 3 | OPEN — out of scope for Stream D execution |
 | V5 | MEMORY.md missing entries | — | FIXED |
 | V6 | Domain not registered | Group 1+4 | OPEN — user action (financial transaction) |
@@ -186,3 +186,24 @@ Macro-execution session derived from `~/.claude/plans/snuggly-gathering-bear.md`
 **A1+A2 from `.claude/plans/2026-04-28-rob-world-allusions-sweep.md`:** confirmed shipped in commits `e4ed095`, `53bcd32` (content-strategy.ts at `src/lib/content-strategy.ts`, vitest wired, 52→56 tests across 4 suites).
 
 **Closing this session (deferred to Phase 5):** Phase 3 deploy assets · Phase 4 Kit form wiring + runbook + Rob homework refresh · DONE counter increment · close-out summary · `.conductor/active-handoff.md` refresh for next Stream-D session.
+
+### Stream D 2026-04-30 (`S-2026-04-30-eval-to-growth-ingest-digest`)
+
+User-directed full ingest+digest pass with the 9-step Evaluation-to-Growth framework as the deliverable spine. Bounded contract: log exhaustively, implement bounded by tier-priority.
+
+**Shipped (3 commits, pushed origin/main):**
+- `c9fc331` chore(manifest): regenerate 2026-04-30 ingest snapshot (220→233 entries; +13 drift, of which 11 editor-noise + 2 substantive)
+- `0485505` docs(review): 2026-04-30 evaluation-to-growth master review at `docs/reviews/2026-04-30-eval-to-growth-master.md` (682 insertions, 9-step framework, master register §9.2)
+- `4319b4f` test: cover engine.ts barrel + landing-engine composition layer (56→80 tests, 4→6 suites)
+
+**Verified:** `npm test` 80/80 ✓ · `npm run build` 10/10 routes ✓ · working tree clean · local:remote = 0:0.
+
+**Load-bearing surprise (P0):** `src/lib/landing-engine/sections.ts:104` emits `href: \`/pillars/${slug}\`` but the `/app/pillars/` route does not exist — every `/for/<persona>` page renders 3 dead links. Tests don't validate route resolvability; Next.js doesn't statically check internal hrefs. Surfaced only via deep code-read. Fix options: (a) interim 1-line `/#cta`, (b) build `/app/pillars/[slug]/page.tsx` (synergizes with `/for/<persona>/<pillar>` long-tail SEO surface, review §8.5).
+
+**Codex manifest tool blind spots (review §1.6):** `EXCLUDED_DIRS` does NOT include `.history/`, `.lh/`, `.gemini/` — drift signal:noise = 2:13 on this pass. P0 low-cost fix.
+
+**IRF cross-mapping (review §6.4.1):** `xp-ledger.ts` matches existing PRT-038, Character Sheet onboarding matches PRT-039, dead-link is genuinely net-new candidate. No new IRF rows authored from Stream D (Gate territory).
+
+**Memory captures:** 3 new entries in `~/.claude/projects/-Users-4jp-Workspace-4444J99-hokage-chess/memory/` (eval-to-growth artifact, dead-link finding, bounding-contract feedback) + MEMORY.md index updated.
+
+**Tier A user-decisions surfaced (carrying forward):** dead-link fix (option a or b) · manifest `EXCLUDED_DIRS` patch · `seed.yaml` vacuum closure (`produces`/`consumes`/`last_validated`/`dual_purpose`) · GH issue creation for review §9.2 P0 items.

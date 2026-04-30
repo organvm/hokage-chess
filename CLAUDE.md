@@ -114,6 +114,10 @@ Never bypass with `--no-verify`. The pre-commit hook is the source of truth; if 
 
 Last-known-green: ≈80 tests across 6 suites, build emits ≈10 routes. Both must stay green before any push touching `src/`. **Treat these numbers as advisory** — re-check via `npm test` and `npm run build` rather than trusting the figure. Tests are pure-function unit tests against `src/lib/`; no fixtures, no DB, no network.
 
+## Client-Separation Substrate
+
+Client information must never bleed across clients or into public surfaces. The four zones (`public:all`, `(me)`, `{client:rob}`, `{client:maddie}`) and their flow rules are documented at `docs/governance/client-separation-substrate.md`. Read that doc before triaging any cross-scope artifact, before pasting external session content into a chat bound to this repo, or before writing files that name another client. Routing rule: route by content / scope-of-generation (R1), not by user-declared intent. Live-paste rule: if cross-client material lands in this scope's chat, refuse to operationalize, suggest correct routing, never absorb the wrong-scope content into auto-memory.
+
 ## What NOT to do
 
 - Do not re-bake brand-specific vocabulary into `content-strategy.ts` — keep it parametric.

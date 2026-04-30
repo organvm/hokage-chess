@@ -4,6 +4,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 @AGENTS.md
 
+`GEMINI.md` is a compressed Gemini-twin of this doc — not load-bearing for Claude, kept in shape-parity for cross-agent orientation.
+
 ## What this is
 
 Client engagement for Rob Bonavoglia (@HokageChess, NYC chess YouTuber). A Next.js 16 + React 19 landing page + business strategy substrate for the Hokage Chess brand. `seed.yaml` declares `organ: PERSONAL`, `tier: standard`, `type: client-project`, `status: LOCAL`, `implementation: ACTIVE`.
@@ -17,7 +19,7 @@ npm run dev          # Next.js dev server → http://localhost:3000
 npm run build        # Production build (verify before any deploy; baseline ≈10 routes)
 npm run start        # Serve the production build
 npm run lint         # ESLint (eslint.config.mjs, eslint-config-next preset)
-npm run test         # Vitest run-mode (baseline ≈56 tests across 4 suites — re-check, don't trust)
+npm run test         # Vitest run-mode (baseline ≈80 tests across 6 suites — re-check, don't trust)
 npm run test:watch   # Vitest watch-mode
 npx vitest run tests/content-strategy.test.ts   # Single suite
 npx vitest run -t "scoreVideo applies time-bonus"  # Single test by name
@@ -59,9 +61,14 @@ Beyond `substrate/bodi/` and `archive/`, the repo carries dated working material
 - `docs/business/` — business-strategy artifacts (2026-04-25 → 2026-04-27): BODI funnel architecture, pitch decks v1–v3, strategy v4–v6, cross-pollination diagnosis, GTM pipeline, Rob/Anthony funnel-audit transcript, world-maps. Where the 75-person constellation master lives.
 - `docs/content/` — content-pillar drafts and Discord/LinkedIn artifacts.
 - `docs/rob/` — collaborator-facing working docs (e.g. `2026-04-28-rob-magnetic-manifest.md`).
-- `docs/manifests/` — project-manifest annotated bibliography (`.jsonl` + `.md`).
+- `docs/manifests/` — project-manifest annotated bibliography (`.jsonl` + `.md`). Regenerate via `python3 tools/project_manifest.py`; the generator script is preserved in `tools/` for repeatable refreshes. **Caveat:** current `EXCLUDED_DIRS` does NOT exclude `.history/`, `.lh/`, `.gemini/` — drift counts are inflated by editor-history noise until that's patched (see `docs/reviews/2026-04-30-eval-to-growth-master.md` §1.6 / §A.2).
+- `docs/reviews/` — periodic master reviews structured by the Evaluation-to-Growth framework (Critique → Logic → Logos → Pathos → Ethos → Blind Spots → Shatter Points → Bloom → Evolve). Most recent review carries the canonical next-session work queue (§9.2 register). Append-only — never overwrite; new dates supersede.
 - `docs/superpowers/intakes/` — superpower intake material.
 - `docs/ROB-FIRST-30-DAYS.md` — top-level engagement plan for the Rob client engagement.
+
+### Research lineage (`research/apex-predator-parent-architecture/`)
+
+Hokage Chess is the **second instantiation** of an architectural pattern Anthony designed in December 2025 for fitness-niche-coaching. The directory carries the parent-architecture proof: 9 docx + 4 md + 1 xlsx (Apex Predator Playbook, Cheat Codes to a Killer Coaching Biz, Strategic Framework, Gamified Life formal+casual, Project Chimera Master Content Checklist, Legion of Fitness Battle Plan Interrogation). The first instantiation is the **Legion Command Center** at `a-organvm/gamified-coach-interface` (live production since 2025-11). Strategy v6 master + pitch-deck v3 + business-plan v2 cite this lineage explicitly; the "Architect's Demonstrated Capacity" claim depends on it. When auditing or evolving any strategy doc, treat `research/apex-predator-parent-architecture/` as authoritative upstream lineage — do NOT reinvent primitives that exist there (XP / Character Sheet / quest-achievement model are inherited, not invented).
 
 ### Storefront opt-in (`storefront.config.yaml`)
 
@@ -85,7 +92,7 @@ The repo carries three coordination surfaces. Each has a distinct role:
 - **`.conductor/active-handoff.md`** — single-session entry permit. Read FIRST in any new session before any write. Carries repo lock, scope constraints, prior-session inheritance, and audit findings.
 - **`docs/archive/2026-MM/`** — dated close-out summaries (`YYYY-MM-DD-stream-d-closeout.md`, `…-late-closeout.md`). Append-only — never overwrite a prior close-out; create a new dated artifact instead.
 
-Plan discipline: plans live at BOTH `~/.claude/plans/<slug>.md` AND `<repo>/.claude/plans/YYYY-MM-DD-<slug>.md`. Mirror after writing.
+Plan discipline: plans live at BOTH `~/.claude/plans/<slug>.md` AND `<repo>/.claude/plans/YYYY-MM-DD-<slug>.md`. Mirror after writing. The sibling `.codex/plans/` directory is the codex agent's parallel planning surface (5 plans as of 2026-04-30) — codex plans are NOT mirrored to the Claude paths; each agent owns its own dir.
 
 ## Cross-stream context
 
@@ -105,7 +112,7 @@ Never bypass with `--no-verify`. The pre-commit hook is the source of truth; if 
 
 ## Tests baseline
 
-Last-known-green: ≈56 tests across 4 suites, build emits ≈10 routes. Both must stay green before any push touching `src/`. **Treat these numbers as advisory** — re-check via `npm test` and `npm run build` rather than trusting the figure. Tests are pure-function unit tests against `src/lib/`; no fixtures, no DB, no network.
+Last-known-green: ≈80 tests across 6 suites, build emits ≈10 routes. Both must stay green before any push touching `src/`. **Treat these numbers as advisory** — re-check via `npm test` and `npm run build` rather than trusting the figure. Tests are pure-function unit tests against `src/lib/`; no fixtures, no DB, no network.
 
 ## What NOT to do
 

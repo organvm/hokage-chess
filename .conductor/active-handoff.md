@@ -130,13 +130,15 @@ The dispatcher's "Hokage Transcript Hygiene" framing was stale. Verified scope v
 - [#45 — V8: Vercel landing page deploy](https://github.com/4444J99/hokage-chess/issues/45)
 - [#46 — V7: Kit email capture wiring + setup runbook](https://github.com/4444J99/hokage-chess/issues/46)
 
-### IRF candidates emitted
+### IRF candidates emitted (corrected 2026-04-29-late by hall-monitor audit)
 
-All three triple-reference complete (artifact + commit + GH issue), pending only Stream H Reconciliation Gate verification + DONE counter increment:
+Original close-out asserted three new IRF candidates. Audit against `INST-INDEX-RERUM-FACIENDARUM.md` reveals only one is genuinely net-new — the V8 and V7 substrate map onto pre-existing rows. Corrected mapping:
 
-- `IRF-PRT-046` — constellation master + gap manifest · `ef75cb1` · GH #44
-- `IRF-PRT-V8` — Vercel deploy preflight (V8 substrate) · `8f17b5f` (+ `b0e3a9f`, `4fdbc19` supporting) · GH #45
-- `IRF-PRT-V7` — Kit form handler wiring + setup runbook (V7 substrate) · `c253df8` (+ `52bbcae` supporting) · GH #46
+- `IRF-PRT-046` — constellation master + gap manifest · `ef75cb1` · GH #44 — **NET-NEW; only IRF candidate this stream emits**
+- V8 (Vercel deploy preflight `8f17b5f` + `b0e3a9f` + `4fdbc19`) → maps to existing **`IRF-PRT-028`** (P0, Vercel deploy) and **`IRF-PRT-029`** (OG metadata) and **`IRF-PRT-036`** (per-page OG image route). GH #45 anchors the user-driven action; no new IRF row.
+- V7 (Kit form handler `c253df8` + setup runbook `52bbcae`) → maps to existing **`IRF-PRT-030`** (P1, Kit API integration) and **`IRF-PRT-060`** (P0, Kit API key user blocker). GH #46 anchors the user-driven action; no new IRF row.
+
+The parallel `goal-dapper-wall` close-out correctly avoided authoring duplicate rows. The original "3 IRF candidates" claim overstated by 2.
 
 ### Verified state at session close
 
@@ -199,3 +201,47 @@ If Rob's homework lands (any of #1, #3, #4, #5, #6, #7, #8 from `docs/business/2
 ### Honest scope assessment (from close-out)
 
 The dispatcher set up Rob and Maddie as parallel sessions assuming peer scope. This session shipped **17 commits across 5 phases** (15 substantive + 2 envelope refreshes) with 3 GH issues + 3 IRF candidates. **Rob and Maddie ARE peer-scope**, contrary to the dispatcher's narrow "transcript hygiene" framing. The substrate work this session is the *unblock layer* — making Rob's actual deploy a 10-minute user-driven sequence rather than a multi-session engineering project.
+
+---
+
+## 2026-04-29-late close-out note (hall-monitor pass)
+
+**Session ID:** `S-2026-04-29-rob-hokage-late-closeout`
+**Trigger:** User invoked the close-out protocol again on a fresh session that opened with the prior session's `/export` pasted as context.
+**Mode:** Plan → autonomous execution; close-out scope only (no substantive substrate work).
+
+**Decisions resolved between sessions (no further action required):**
+
+- **Decision 1 (push-to-main).** Already pushed; `git rev-list --count origin/main..HEAD` = 0 at session start. The earlier "17 commits stacked locally" claim was obsolete by the time this session opened.
+- **Decision 2 (DONE counter).** `next_id` advanced 505 → 522 via parallel `goal-dapper-wall` close-out. That session claimed DONE-508..521 (Maddie M-1..7, Rob R-1..3, session-gap X-1..3, cross-repo distillation map). **Not Stream-D's claim to make.**
+
+**Decision 3 still standing:** Vercel auth + `hokagechess.com` registration + Kit credentials remain user-driven; runbooks at `docs/business/2026-04-29-vercel-deploy-preflight.md` and `docs/business/2026-04-29-kit-setup-runbook.md`.
+
+**Hall-monitor audit corrections this turn:**
+
+1. **IRF candidate count corrected** (above) — only PRT-046 is net-new; V8/V7 map to PRT-028/029/030/036/060.
+2. **`.gitignore` extended** to cover `/export`-generated transcripts and `session-ses_*.md` files at repo root (pattern miss caused 2 untracked artifacts this turn).
+3. **Plan discipline enforced** — continuation plan mirrored from `~/.claude/plans/` into project `.claude/plans/2026-04-29-stream-d-continuation.md`.
+4. **Off-repo durable storage for unsafe-to-commit transcripts** — the `/export` transcript triggered gitleaks on a literal credential-keyword substring inside a code-diff fragment (false positive but defensible policy). Routed to `~/.local/share/hokage-chess/operational/exports/2026-04-29-154753-stream-d-export.txt` per the Public/Private classification system's `O`-tier rule. **Followup:** chezmoi-mirror that path so the local-only file gets a remote per the local:remote = 1:1 axiom.
+5. **Session-memory archive** — `session-ses_2251.md` content overlapped with already-shipped `2026-04-29-stream-d-closeout.md`; archived as-is to `docs/archive/2026-04/2026-04-29-session-ses_2251-memory.md` with no novel decisions to cannibalize.
+
+**Late close-out commits:**
+
+- `archive: 2026-04-29 stream-d session memory artifact` (`839bb1e`)
+- `chore: gitignore session export + session-memory at repo root` (`c9b83ea`)
+- `plans: 2026-04-29 stream-d continuation plan (close-out scope)` (`b7b4600`)
+- `chore(handoff): hall-monitor audit corrections + 2026-04-29-late close-out note` (this commit)
+- `docs(closeout): 2026-04-29 stream-d late close-out (hall-monitor pass)` (next)
+
+**Verified state at this turn's close:**
+
+- Working tree: clean after this commit + the late-closeout commit land.
+- Origin sync: pushed at session end.
+- DONE counter: untouched (522), no Stream-D claim.
+- GH issues #44/#45/#46: still OPEN, correctly tracking user-driven blockers.
+- Tests + build: not re-run this turn (no source code changes; only docs + .gitignore + archive moves). Last verified at `7d29278`: 56/56 ✓ + 10/10 ✓.
+
+**Open followup (out of scope this session, surfaced for next):**
+
+- Chezmoi-mirror `~/.local/share/hokage-chess/operational/` so off-repo durable storage gets remote parity.
+- IRF row-mapping audit for PRT-028/029/030/036/060 — verify the goal-dapper-wall pass actually closed the substrate-shipped portion of those rows; if not, the substrate-shipped state is observable but unrecorded.

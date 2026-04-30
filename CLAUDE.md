@@ -14,14 +14,14 @@ The repo is dual-purpose: (1) the deployable landing surface for the Rob client 
 
 ```bash
 npm run dev          # Next.js dev server → http://localhost:3000
-npm run build        # Production build (10 routes; verify before any deploy)
+npm run build        # Production build (verify before any deploy; baseline ≈10 routes)
 npm run start        # Serve the production build
 npm run lint         # ESLint (eslint.config.mjs, eslint-config-next preset)
-npm run test         # Vitest run-mode (current baseline: 56 tests across 4 suites)
+npm run test         # Vitest run-mode (baseline ≈56 tests across 4 suites — re-check, don't trust)
 npm run test:watch   # Vitest watch-mode
 npx vitest run tests/content-strategy.test.ts   # Single suite
 npx vitest run -t "scoreVideo applies time-bonus"  # Single test by name
-node scripts/generate-og-image.mjs               # Regenerate src/app/opengraph-image.png from og-source.svg
+node scripts/generate-og-image.mjs               # Regenerate src/app/opengraph-image.png (source: scripts/og-source.svg)
 ```
 
 ## Architecture
@@ -44,11 +44,24 @@ The lib layer is **brand-agnostic** by design — Rob's domain vocabulary is par
 
 ### Visual system
 
-Dark mode. Hokage Red `#C41E3A`. Oswald for headlines, DM Sans for body, JetBrains Mono for ELO numbers. All in `src/app/globals.css` and `tailwind.config.js`. Tailwind v3, not v4 — adjust expectations.
+Dark mode. Hokage Red `#C41E3A` is the lead accent, but the canonical palette (crimson / gold / charcoal / dark / gray / light variants) lives in `tailwind.config.js`, with matching CSS custom properties exposed in `src/app/globals.css` — reference these tokens rather than inventing ad-hoc colors. Oswald for headlines, DM Sans for body, JetBrains Mono for ELO numbers. Tailwind v3, not v4 — adjust expectations.
+
+Imports use the path alias `@/*` → `./src/*` (declared in `tsconfig.json`); follow this convention rather than relative `../../` chains.
 
 ### Substrate layer (`docs/substrate/bodi/`)
 
 Eight-layer substrate per the domain-ideal-whole schema (ontology → lineage → constellation → gap-map → agent-fleet → production-stack → internal-magnet → external-contribution). `actor-cards/` under `03-constellation/` holds named-actor analysis for the 75-person constellation work (`docs/business/2026-04-29-75-person-constellation-master.md`). The skill that generates this substrate lives at `~/Workspace/a-i--skills/skills/project-management/domain-ideal-whole-substrate/`.
+
+#### Other `docs/` subdirs
+
+Beyond `substrate/bodi/` and `archive/`, the repo carries dated working material that future instances will encounter:
+
+- `docs/business/` — business-strategy artifacts (2026-04-25 → 2026-04-27): BODI funnel architecture, pitch decks v1–v3, strategy v4–v6, cross-pollination diagnosis, GTM pipeline, Rob/Anthony funnel-audit transcript, world-maps. Where the 75-person constellation master lives.
+- `docs/content/` — content-pillar drafts and Discord/LinkedIn artifacts.
+- `docs/rob/` — collaborator-facing working docs (e.g. `2026-04-28-rob-magnetic-manifest.md`).
+- `docs/manifests/` — project-manifest annotated bibliography (`.jsonl` + `.md`).
+- `docs/superpowers/intakes/` — superpower intake material.
+- `docs/ROB-FIRST-30-DAYS.md` — top-level engagement plan for the Rob client engagement.
 
 ### Storefront opt-in (`storefront.config.yaml`)
 
@@ -92,7 +105,7 @@ Never bypass with `--no-verify`. The pre-commit hook is the source of truth; if 
 
 ## Tests baseline
 
-56 tests across 4 suites, currently green. The build produces 10 routes. Both must stay green before any push touching `src/`. Tests are pure-function unit tests against `src/lib/`; no fixtures, no DB, no network.
+Last-known-green: ≈56 tests across 4 suites, build emits ≈10 routes. Both must stay green before any push touching `src/`. **Treat these numbers as advisory** — re-check via `npm test` and `npm run build` rather than trusting the figure. Tests are pure-function unit tests against `src/lib/`; no fixtures, no DB, no network.
 
 ## What NOT to do
 

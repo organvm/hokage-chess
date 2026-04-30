@@ -245,3 +245,57 @@ The dispatcher set up Rob and Maddie as parallel sessions assuming peer scope. T
 
 - Chezmoi-mirror `~/.local/share/hokage-chess/operational/` so off-repo durable storage gets remote parity.
 - IRF row-mapping audit for PRT-028/029/030/036/060 — verify the goal-dapper-wall pass actually closed the substrate-shipped portion of those rows; if not, the substrate-shipped state is observable but unrecorded.
+
+---
+
+## 2026-04-30 close-out note (eval-to-growth ingest+digest)
+
+**Session ID:** `S-2026-04-30-eval-to-growth-ingest-digest`
+**Mode:** Auto + bounded contract (log exhaustively, implement bounded by tier-priority).
+**Trigger:** User-directed full 100% ingest of all documents → annotated bibliography manifest (codex pipeline retained, drift-checked) → stub/skeleton hunt → test-coverage gap closure → Evaluation-to-Growth 9-step review applied across past/present/future.
+
+**Shipped (3 commits + 3 housekeeping commits, all pushed origin/main):**
+
+| # | Hash | Subject |
+|---|---|---|
+| 1 | `c9fc331` | chore(manifest): regenerate 2026-04-30 ingest snapshot (220→233 entries) |
+| 2 | `0485505` | docs(review): 2026-04-30 evaluation-to-growth master review (682 insertions) |
+| 3 | `4319b4f` | test: cover engine.ts barrel + landing-engine composition layer (56→80 tests, 4→6 suites) |
+| 4 | (this turn) | docs(claude): add research/apex-predator-parent-architecture lineage + docs/reviews + manifest EXCLUDED_DIRS caveat |
+| 5 | (this turn) | docs(handoff): refresh vacuum table + 2026-04-30 session log |
+| 6 | (this turn) | chore(handoff): 2026-04-30 close-out note (this commit) |
+
+**Verified state at session close:**
+
+- `npm run test` → 80/80 ✓ (4 → 6 suites)
+- `npm run build` → 10/10 routes ✓
+- Working tree: clean after these 3 housekeeping commits land
+- Origin sync: 0:0 parity (auto-push mechanism propagates each commit)
+
+**Load-bearing surprise (P0):** dead-link `/pillars/<slug>` at `src/lib/landing-engine/sections.ts:104` — full diagnosis in `docs/reviews/2026-04-30-eval-to-growth-master.md` §7.2 / §6.4.6 / §B.3 / §9.2. Two fix options registered. NOT yet fixed; NOT yet GH-issued (user denied preemptive issue creation — said "status check, not file tickets" — appropriate hall-monitor catch).
+
+**Codex manifest tool §1.6 blind spots (registered, not implemented):** `EXCLUDED_DIRS` extension to drop `.history/`, `.lh/`, `.gemini/` (P0 low-cost) · cross-document edge extractor (P2) · frontmatter-aware tagger (P3) · binary content-loss flagging (P3).
+
+**Cross-mapping observations (review §6.4):** `xp-ledger.ts` → existing PRT-038, Character Sheet onboarding → existing PRT-039, dead-link → net-new IRF candidate. No new IRF rows authored from Stream D (Gate territory).
+
+**N/A vacuums atomized this session (14 total, all in review §6 / §7 / §9.2):** dead-link · manifest excludes · `seed.yaml` `produces`/`consumes`/`last_validated`/`dual_purpose` · drift report tool · component snapshot tests · `/api/subscribe` integration test · cross-document reference extractor · Hokage-specific substrate (vs BODI parent) · `/for/<persona>/<pillar>` long-tail route · frontmatter-aware tagger · repo health pulse · landing-engine extracted to `@4444j99/landing-engine` · `xp-ledger.ts` extracted to `@4444j99/xp-ledger` · Eval-to-Growth review as templated skill artifact.
+
+**Memory captures (durable persistence):**
+
+- `project_artifact_2026_04_30_eval_to_growth_master.md` — deliverable + cross-refs to surprises
+- `project_finding_2026_04_30_pillars_dead_link.md` — P0 finding with fix options
+- `feedback_bounding_contract_for_unbounded_asks.md` — pattern that worked this session
+- `MEMORY.md` index updated
+
+**Recommended focus for next Stream-D session:**
+
+1. Dead-link fix decision (interim option a vs route option b) — single highest-leverage user-facing fix
+2. Manifest `EXCLUDED_DIRS` patch (P0 low-cost) — drops drift signal:noise from 2:13 to clean
+3. `seed.yaml` vacuum closure — declare `produces`/`consumes`, refresh `last_validated`, add `dual_purpose: true` (review §7.6)
+4. GH issues for §9.2 P0/P1 items (staggered per the 2-3-per-session rule)
+5. Mobile QA execution (PRT-037) once Vercel deploy lands
+6. Welcome sequence email copy once Kit credentials land
+
+**Cross-stream signals (still standing from 2026-04-29 stream-D close-out):** §A.4 / §A.5 / §A.6 / §A.7 of `docs/archive/2026-04/gemini-2026-04-28-refactored-workstreams.md` are Maddie-relevant. Repo lock honored; not cross-written.
+
+**Hall-monitor self-audit (this session):** zero overwrites, zero `--no-verify`, zero IRF-body writes, zero DONE-counter writes, zero out-of-repo writes. One preemptive GH issue creation attempted and DENIED by hooks — recovered correctly by surfacing as user-decision question. All gates green.

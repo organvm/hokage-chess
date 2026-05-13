@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hokage Chess & BODI Substrate
 
-## Getting Started
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Version](https://img.shields.io/badge/version-1.0.0-orange)
 
-First, run the development server:
+A dual-purpose repository serving as the deployable landing surface for Rob Bonavoglia (@HokageChess, NYC chess YouTuber) and the working substrate for the broader BODI (Body Of Discipline) cross-pollination architecture.
+
+## Features
+
+- ✅ **Dynamic Persona Routing**: `landing-engine` primitive for dynamically generating per-persona routes.
+- ✅ **Brand-Agnostic Engines**: Universal title, thumbnail, and video-idea scoring injected with domain vocabulary.
+- ✅ **Kit Integration**: Email-capture handler using Kit.
+- ✅ **Modern Tech Stack**: Built with Next.js 16, React 19, TypeScript, and Tailwind CSS v3.
+
+## Quick Start
+
+### Prerequisites
+
+- Node.js >= 25
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/4444J99/hokage-chess.git
+cd hokage-chess
+npm install
+```
+
+### Usage
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run the test suite:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run test
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Documentation
 
-## Learn More
+Full architectural documentation and cross-pollination details are located in `docs/substrate/bodi/`.
+Read `.conductor/active-handoff.md` and `HANDOFF.md` before making contributions.
 
-To learn more about Next.js, take a look at the following resources:
+## Architecture Highlights
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **`src/lib/content-strategy.ts`**: Brand-neutral content strategy engine.
+- **`src/lib/landing-engine/`**: Persona × Narrative × Section engine.
+- **`src/app/`**: Root page, dynamic persona routes, and API endpoints.
+- **Visual System**: Dark mode with Hokage Red (`#C41E3A`) and Oswald, DM Sans, JetBrains Mono fonts.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

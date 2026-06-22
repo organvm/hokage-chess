@@ -1,6 +1,6 @@
-# [MP-2] Cross-Pillar Content Rhythm Spec
+# [MP-2] Cross-pillar content rhythm spec (when chess vs. fitness vs. bridge)
 
-**Date:** 2026-04-30
+**Date:** 2026-04-26
 **Status:** PROPOSED
 **Related Atoms:** MP-10 (Time Budget), BR-1 (Bridge Content), MP-1 (Pillar Taxonomy)
 
@@ -63,7 +63,27 @@ The production cadence must fundamentally align with the target time reallocatio
 
 *Action Item:* Update exact hour allocations once MP-10 is closed and the realistic hour count is finalized.
 
-## 6. Next Steps
+## 6. Production-Friction Estimates per Format
+
+To sustain the cadence without burnout, we need to estimate the friction (time + mental load) for each format:
+
+*   **Long-form Video (Deep Dives, Bridge Content)**
+    *   *Friction Level:* HIGH (5-8 hours)
+    *   *Process:* Scripting/Outlining -> Setup/Lighting -> A-Roll/B-Roll -> Editing -> Thumbnail -> SEO/Publish.
+*   **Short-form Video (Stream Highlights, Quick Tips, Form Checks)**
+    *   *Friction Level:* LOW-MEDIUM (1-2 hours)
+    *   *Process:* Clip extraction / Quick recording -> Vertical edit/captions -> Publish.
+*   **Written Content (Carousel, Analytical Blog Post)**
+    *   *Friction Level:* MEDIUM (2-4 hours)
+    *   *Process:* Research/Writing -> Graphic design/Formatting -> Review -> Publish.
+*   **Live Streams (Casual Blitz, Community Games)**
+    *   *Friction Level:* LOW (Requires dedicated time block, but low prep/post-production)
+    *   *Process:* Setup -> Live interaction -> VOD save.
+*   **Quest Log / Newsletter**
+    *   *Friction Level:* MEDIUM (2-3 hours)
+    *   *Process:* Weekly review/synthesis -> Copywriting -> Formatting in email client -> Proofreading.
+
+## 7. Next Steps
 
 1.  Rob to review and approve the baseline Mon-Sun cadence structure.
 2.  Finalize MP-10 to lock in the exact hours allocated per pillar.

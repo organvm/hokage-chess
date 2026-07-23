@@ -188,22 +188,22 @@ YouTube Data API ──→ Channel Analytics ──→ Content Metrics
 ### Quick Start
 
 ```bash
-# Clone the repository
+## Clone the repository
 git clone https://github.com/organvm-iii-ergon/hokage-chess.git
 cd hokage-chess
 
-# Create virtual environment
+## Create virtual environment
 python -m venv .venv
 source .venv/bin/activate
 
-# Install dependencies
+## Install dependencies
 pip install -e ".[dev]"
 
-# Copy environment template and fill in credentials
+## Copy environment template and fill in credentials
 cp .env.example .env
-# Edit .env with your YouTube API credentials and Chess.com username
+## Edit .env with your YouTube API credentials and Chess.com username
 
-# Verify installation
+## Verify installation
 hokage --version
 hokage health-check
 ```
@@ -211,7 +211,7 @@ hokage health-check
 ### Environment Configuration
 
 ```bash
-# .env.example
+## .env.example
 YOUTUBE_CLIENT_ID=your-oauth-client-id
 YOUTUBE_CLIENT_SECRET=your-oauth-client-secret
 CHESSCOM_USERNAME=your-chess-com-username
@@ -223,13 +223,13 @@ HOKAGE_LOG_LEVEL=INFO
 ### First Run
 
 ```bash
-# Authenticate with YouTube (opens browser for OAuth flow)
+## Authenticate with YouTube (opens browser for OAuth flow)
 hokage auth youtube
 
-# Import your Chess.com game history
+## Import your Chess.com game history
 hokage import games --username YOUR_USERNAME --months 6
 
-# Generate your first weekly scorecard
+## Generate your first weekly scorecard
 hokage scorecard generate
 ```
 
@@ -242,13 +242,13 @@ hokage scorecard generate
 The content calendar manages a 3+3 weekly schedule: three long-form videos (Monday, Wednesday, Friday) and three Shorts (Tuesday, Thursday, Saturday). All content is planned two weeks in advance with batch filming sessions.
 
 ```bash
-# View current two-week content plan
+## View current two-week content plan
 hokage calendar show
 
-# Generate next week's content plan based on analytics
+## Generate next week's content plan based on analytics
 hokage calendar plan --week next
 
-# Add a video to the calendar
+## Add a video to the calendar
 hokage calendar add \
   --date 2026-02-17 \
   --type long-form \
@@ -256,52 +256,52 @@ hokage calendar add \
   --narrative-act climax \
   --quarterly-arc "Rival Wars"
 
-# List all videos in the current quarterly narrative arc
+## List all videos in the current quarterly narrative arc
 hokage calendar arc --quarter Q1-2026
 ```
 
 ### Analytics Queries
 
 ```bash
-# Weekly scorecard with all metrics
+## Weekly scorecard with all metrics
 hokage scorecard generate --format markdown
 
-# CTR analysis for the last 30 days
+## CTR analysis for the last 30 days
 hokage analytics ctr --days 30
 
-# Retention analysis for a specific video
+## Retention analysis for a specific video
 hokage analytics retention --video-id VIDEO_ID
 
-# Subscriber velocity and phase gate status
+## Subscriber velocity and phase gate status
 hokage growth status
 
-# Revenue breakdown by stream
+## Revenue breakdown by stream
 hokage revenue summary --month 2026-02
 ```
 
 ### Title and Thumbnail Scoring
 
 ```bash
-# Score a proposed title against the formula
+## Score a proposed title against the formula
 hokage content score-title "I Sacrificed My Queen and This Happened"
-# Output: Score 8.2/10 — Emotion: YES (sacrifice), Stakes: YES (queen), Context: PARTIAL (add opponent context)
+## Output: Score 8.2/10 — Emotion: YES (sacrifice), Stakes: YES (queen), Context: PARTIAL (add opponent context)
 
-# Evaluate a thumbnail concept
+## Evaluate a thumbnail concept
 hokage content score-thumbnail \
   --has-face true \
   --emotion "shock" \
   --text-words 3 \
   --has-board-position true
-# Output: Score 9.1/10 — All criteria met
+## Output: Score 9.1/10 — All criteria met
 ```
 
 ### Narrative Planning
 
 ```bash
-# View quarterly narrative arc
+## View quarterly narrative arc
 hokage narrative arc --quarter Q1-2026
 
-# Plan a Ki-Sho-Ten-Ketsu structure for a video
+## Plan a Ki-Sho-Ten-Ketsu structure for a video
 hokage narrative structure \
   --game-id CHESSCOM_GAME_ID \
   --hook "rating milestone" \
@@ -317,78 +317,78 @@ hokage narrative structure \
 This is the end-to-end workflow for producing an optimized chess video, from game selection to publication:
 
 ```bash
-# Step 1: Identify the most compelling game from recent play
+## Step 1: Identify the most compelling game from recent play
 hokage games rank --days 7 --criteria drama
-# Output:
-# 1. Game #48291 — Rating: 1247 vs 1312 — Queen sacrifice leads to checkmate (Drama: 9.4)
-# 2. Game #48287 — Rating: 1247 vs 1198 — Opponent blunders in winning position (Drama: 7.8)
-# 3. Game #48290 — Rating: 1247 vs 1275 — Endgame grind, down material (Drama: 6.2)
+## Output:
+## 1. Game #48291 — Rating: 1247 vs 1312 — Queen sacrifice leads to checkmate (Drama: 9.4)
+## 2. Game #48287 — Rating: 1247 vs 1198 — Opponent blunders in winning position (Drama: 7.8)
+## 3. Game #48290 — Rating: 1247 vs 1275 — Endgame grind, down material (Drama: 6.2)
 
-# Step 2: Generate title candidates for the top game
+## Step 2: Generate title candidates for the top game
 hokage content titles --game-id 48291 --count 5
-# Output:
-# 1. "I Sacrificed My QUEEN and My Opponent Had No Idea" (Score: 8.7)
-# 2. "The Queen Sacrifice That Shouldn't Have Worked" (Score: 8.3)
-# 3. "How I Beat a 1300 With the CRAZIEST Queen Sacrifice" (Score: 7.9)
-# 4. "My Opponent Thought I Blundered My Queen..." (Score: 8.5)
-# 5. "This Queen Sacrifice is NOT What You Think" (Score: 7.2)
+## Output:
+## 1. "I Sacrificed My QUEEN and My Opponent Had No Idea" (Score: 8.7)
+## 2. "The Queen Sacrifice That Shouldn't Have Worked" (Score: 8.3)
+## 3. "How I Beat a 1300 With the CRAZIEST Queen Sacrifice" (Score: 7.9)
+## 4. "My Opponent Thought I Blundered My Queen..." (Score: 8.5)
+## 5. "This Queen Sacrifice is NOT What You Think" (Score: 7.2)
 
-# Step 3: Generate a Ki-Sho-Ten-Ketsu script outline
+## Step 3: Generate a Ki-Sho-Ten-Ketsu script outline
 hokage narrative structure --game-id 48291
-# Output:
-# Ki (0:00-0:15):  "I'm about to show you the game that changed how I think about chess."
-# Sho (0:15-4:00): Build up — solid opening, slight edge, opponent applies pressure
-# Ten (4:00-6:00): The sacrifice — queen for two pieces and an attack that should not work
-# Ketsu (6:00-7:30): The checkmate, what I learned, tease the next rivalry video
+## Output:
+## Ki (0:00-0:15):  "I'm about to show you the game that changed how I think about chess."
+## Sho (0:15-4:00): Build up — solid opening, slight edge, opponent applies pressure
+## Ten (4:00-6:00): The sacrifice — queen for two pieces and an attack that should not work
+## Ketsu (6:00-7:30): The checkmate, what I learned, tease the next rivalry video
 
-# Step 4: Schedule the video
+## Step 4: Schedule the video
 hokage calendar add --date 2026-02-19 --type long-form --game-id 48291 --title-index 1
 ```
 
 ### Example 2: Growth Phase Gate Review
 
 ```bash
-# Check current growth phase status
+## Check current growth phase status
 hokage growth status
-# Output:
-# Current Phase: Q1 (33 → 250 subscribers)
-# Current Subscribers: 147
-# Velocity: +18/week (14-day average)
-# Projected Phase Gate: Week 7 of 12 (on track)
+## Output:
+## Current Phase: Q1 (33 → 250 subscribers)
+## Current Subscribers: 147
+## Velocity: +18/week (14-day average)
+## Projected Phase Gate: Week 7 of 12 (on track)
 #
-# Phase Gate Criteria:
-#   ✓ Publishing 3 videos/week consistently (8 consecutive weeks)
-#   ✓ CTR above 4% (current: 5.3%)
-#   ✗ Retention above 50% at 30s (current: 44.2%) — RED LINE: focus on hooks
+## Phase Gate Criteria:
+##   ✓ Publishing 3 videos/week consistently (8 consecutive weeks)
+##   ✓ CTR above 4% (current: 5.3%)
+##   ✗ Retention above 50% at 30s (current: 44.2%) — RED LINE: focus on hooks
 #
-# Recommendation: Retention is below target. Review Ki (hook) sections
-# of last 5 videos. Consider A/B testing hook styles: question vs. statement vs. preview.
+## Recommendation: Retention is below target. Review Ki (hook) sections
+## of last 5 videos. Consider A/B testing hook styles: question vs. statement vs. preview.
 
-# Get specific red-line alert details
+## Get specific red-line alert details
 hokage growth alerts
-# Output:
-# ALERT: 30-second retention at 44.2% (target: 50%)
-# — Last 5 videos averaged 42.8% retention at 30s
-# — Best performer: "Queen Sacrifice" at 58.1% (strong emotional hook)
-# — Worst performer: "London System Guide" at 31.4% (educational opener)
-# — Diagnosis: Educational openings underperform narrative hooks by 20+ points
+## Output:
+## ALERT: 30-second retention at 44.2% (target: 50%)
+## — Last 5 videos averaged 42.8% retention at 30s
+## — Best performer: "Queen Sacrifice" at 58.1% (strong emotional hook)
+## — Worst performer: "London System Guide" at 31.4% (educational opener)
+## — Diagnosis: Educational openings underperform narrative hooks by 20+ points
 ```
 
 ### Example 3: Revenue Dashboard
 
 ```bash
 hokage revenue summary --month 2026-02
-# Output:
-# Revenue Summary — February 2026
-# ─────────────────────────────────
-# Ko-fi Tips:          tracked  (12 donations)
-# Coaching Sessions:    pending (launching Q2)
-# YPP Ad Revenue:       pending (not yet eligible — 147/1000 subs)
-# Sponsorships:         pending (pipeline building)
-# ─────────────────────────────────
-# Total:               tracked
-# Run Rate:           projected (annualized from current month)
-# Target Run Rate:    scaling by Month 12
+## Output:
+## Revenue Summary — February 2026
+## ─────────────────────────────────
+## Ko-fi Tips:          tracked  (12 donations)
+## Coaching Sessions:    pending (launching Q2)
+## YPP Ad Revenue:       pending (not yet eligible — 147/1000 subs)
+## Sponsorships:         pending (pipeline building)
+## ─────────────────────────────────
+## Total:               tracked
+## Run Rate:           projected (annualized from current month)
+## Target Run Rate:    scaling by Month 12
 ```
 
 ---
@@ -441,19 +441,19 @@ Sponsorship readiness begins at 1,000 subscribers. Target sponsors include chess
 ### Test Strategy
 
 ```bash
-# Run the full test suite
+## Run the full test suite
 pytest tests/ -v
 
-# Run tests with coverage
+## Run tests with coverage
 pytest tests/ --cov=src --cov-report=term-missing
 
-# Run specific test module
+## Run specific test module
 pytest tests/test_analytics.py -v
 
-# Type checking
+## Type checking
 mypy src/
 
-# Linting
+## Linting
 ruff check src/ tests/
 ```
 
@@ -520,17 +520,17 @@ This repo contributes to the ORGAN-III portfolio angle: evidence of product-mark
 ### Development Setup
 
 ```bash
-# Fork and clone
+## Fork and clone
 git clone https://github.com/YOUR_USERNAME/hokage-chess.git
 cd hokage-chess
 
-# Install development dependencies
+## Install development dependencies
 pip install -e ".[dev]"
 
-# Install pre-commit hooks
+## Install pre-commit hooks
 pre-commit install
 
-# Run the full quality check
+## Run the full quality check
 make check  # lint + type-check + test
 ```
 

@@ -1,24 +1,16 @@
 # HokageChess
 
+A data-driven content platform for chess creators: storytelling framework, analytics engine, and growth system to build sustainable channels on YouTube and beyond.
+
 [![CI](https://github.com/organvm-iii-ergon/hokage-chess/actions/workflows/ci.yml/badge.svg)](https://github.com/organvm-iii-ergon/hokage-chess/actions/workflows/ci.yml)
 [![Coverage](https://img.shields.io/badge/coverage-pending-lightgrey)](https://github.com/organvm-iii-ergon/hokage-chess)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/organvm-iii-ergon/hokage-chess/blob/main/LICENSE)
 [![Organ III](https://img.shields.io/badge/Organ-III%20Ergon-F59E0B)](https://github.com/organvm-iii-ergon)
 [![Status](https://img.shields.io/badge/status-active-brightgreen)](https://github.com/organvm-iii-ergon/hokage-chess)
 [![TypeScript](https://img.shields.io/badge/lang-TypeScript-informational)](https://github.com/organvm-iii-ergon/hokage-chess)
-
-
-![CI](https://img.shields.io/github/actions/workflow/status/organvm-iii-ergon/hokage-chess/ci-python.yml?branch=main&label=CI)
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Organ](https://img.shields.io/badge/organ-III%20%C2%B7%20Commerce-orange)
-![Status](https://img.shields.io/badge/status-DESIGN__ONLY-lightgrey)
-![Language](https://img.shields.io/badge/language-Python-3776AB?logo=python&logoColor=white)
-
-![YouTube](https://img.shields.io/badge/platform-YouTube-red?logo=youtube&logoColor=white)
-![Chess.com](https://img.shields.io/badge/API-Chess.com-81b64c)
-![Data-Driven](https://img.shields.io/badge/approach-data--driven-blueviolet)
-
-**HokageChess is a data-driven chess content creation and audience development platform that transforms chess media from generic tutorials into narrative-driven entertainment, combining Ki-Sho-Ten-Ketsu storytelling structure with growth analytics and strategic content optimization for YouTube and social media.**
+[![YouTube](https://img.shields.io/badge/platform-YouTube-red?logo=youtube&logoColor=white)](https://github.com/organvm-iii-ergon/hokage-chess)
+[![Chess.com](https://img.shields.io/badge/API-Chess.com-81b64c)](https://github.com/organvm-iii-ergon/hokage-chess)
+[![Data-Driven](https://img.shields.io/badge/approach-data--driven-blueviolet)](https://github.com/organvm-iii-ergon/hokage-chess)
 
 ---
 
@@ -54,7 +46,7 @@ Three structural problems define the chess content landscape in 2026:
 
 ### Market Opportunity
 
-The chess content market is large and growing. Chess.com reached 150 million accounts. YouTube chess content generates hundreds of millions of monthly views. Twitch chess viewership surged and stabilized at levels that would have been unimaginable five years ago. But the revenue concentration is extreme: the top 20 chess creators capture the vast majority of sponsorship and ad revenue. HokageChess targets the underserved middle market, creators who want to build sustainable $500-1,000/month chess content businesses without requiring millions of subscribers.
+The chess content market is large and growing. Chess.com reached 150 million accounts. YouTube chess content generates hundreds of millions of monthly views. Twitch chess viewership surged and stabilized at levels that would have been unimaginable five years ago. But the revenue concentration is extreme: the top 20 chess creators capture the vast majority of sponsorship and ad revenue. HokageChess targets the underserved middle market, creators who want to build sustainable content businesses without requiring millions of subscribers.
 
 ---
 
@@ -103,7 +95,7 @@ This structure replaces the tutorial format ("today we learn the London System")
 
 ---
 
-## 3. Technical Architecture
+## Architecture
 
 ```
 hokage-chess/
@@ -389,14 +381,14 @@ hokage revenue summary --month 2026-02
 # Output:
 # Revenue Summary — February 2026
 # ─────────────────────────────────
-# Ko-fi Tips:          $47.00  (12 donations)
-# Coaching Sessions:    $0.00  (launching Q2)
-# YPP Ad Revenue:       $0.00  (not yet eligible — 147/1000 subs)
-# Sponsorships:         $0.00  (pipeline building)
+# Ko-fi Tips:          tracked  (12 donations)
+# Coaching Sessions:    pending (launching Q2)
+# YPP Ad Revenue:       pending (not yet eligible — 147/1000 subs)
+# Sponsorships:         pending (pipeline building)
 # ─────────────────────────────────
-# Total:               $47.00
-# Run Rate:           $282/yr  (annualized from current month)
-# Target Run Rate:    $500/mo by Month 12
+# Total:               tracked
+# Run Rate:           projected (annualized from current month)
+# Target Run Rate:    scaling by Month 12
 ```
 
 ---
@@ -407,30 +399,30 @@ hokage revenue summary --month 2026-02
 
 The monetization strategy is phased to generate revenue before YouTube Partner Program eligibility, eliminating the "monetization cliff" that kills most small channels:
 
-| Phase | Timeline | Revenue Streams | Target Monthly Revenue |
-|-------|----------|-----------------|----------------------|
-| **Phase 0** (Months 1-3) | Q1 | Ko-fi tips, community building | $25-75/mo |
-| **Phase 1** (Months 4-6) | Q2 | Add coaching sessions ($50/hr, 6-10 sessions/mo) | $300-575/mo |
-| **Phase 2** (Months 7-9) | Q3 | Add YPP ad revenue, first sponsorship inquiries | $450-950/mo |
-| **Phase 3** (Months 10-12) | Q4 | Add regular sponsorships, premium community tier | $750-1,500/mo |
+| Phase | Timeline | Revenue Streams | Target Growth |
+|-------|----------|-----------------|---|
+| **Phase 0** (Months 1-3) | Q1 | Ko-fi tips, community building | Foundation |
+| **Phase 1** (Months 4-6) | Q2 | Add coaching sessions (6-10 per month) | Expansion |
+| **Phase 2** (Months 7-9) | Q3 | Add YPP ad revenue, first sponsorship inquiries | Acceleration |
+| **Phase 3** (Months 10-12) | Q4 | Add regular sponsorships, premium community tier | Scale |
 
 ### Revenue Projections (Year 1)
 
-| Stream | Monthly (Steady State) | Annual Projection |
-|--------|----------------------|-------------------|
-| Coaching | $300-500 | $2,400-4,000 |
-| Sponsorships | $100-300 | $600-1,800 |
-| YPP Ad Revenue | $50-150 | $300-900 |
-| Ko-fi / Community | $50-100 | $600-1,200 |
-| **Total** | **$500-1,050** | **$3,900-7,900** |
+| Stream | Steady State | Projection |
+|--------|------|---|
+| Coaching | mid-range | strong growth |
+| Sponsorships | emerging | 12-month ramp |
+| YPP Ad Revenue | pending | post-threshold |
+| Ko-fi / Community | baseline | steady |
+| **Total** | **multi-stream** | **sustainable** |
 
 ### Coaching Service Design
 
 Coaching is the highest-margin revenue stream and the earliest to activate. The service structure:
 
-- **Quick Review** ($25, 30 min): Single game analysis with written summary
-- **Deep Dive** ($50, 60 min): Full opening repertoire review or multi-game pattern analysis
-- **Monthly Mentorship** ($150/mo): Weekly session + async game review + personalized study plan
+- **Quick Review** (30 min): Single game analysis with written summary
+- **Deep Dive** (60 min): Full opening repertoire review or multi-game pattern analysis
+- **Monthly Mentorship**: Weekly session + async game review + personalized study plan
 - **Target capacity:** 6-10 sessions per month (avoid burnout while maintaining content production)
 
 ### Sponsorship Pipeline
@@ -556,6 +548,12 @@ make check  # lint + type-check + test
 - Visualization components for the analytics dashboard
 - Alternative narrative framework templates beyond Ki-Sho-Ten-Ketsu
 - Localization of title formula patterns for non-English chess content markets
+
+---
+
+## Contact
+
+Questions, feedback, or ideas? Connect with the project on [GitHub](https://github.com/4444J99) or open an issue on this repository.
 
 ---
 
